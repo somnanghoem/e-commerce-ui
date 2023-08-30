@@ -1,4 +1,4 @@
-import 'package:e_shoes_app/pages/product/product_box.dart';
+import 'package:e_shoes_app/screen/product/product_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -69,8 +69,6 @@ class _HomePageState extends State<HomePage> {
         child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-             /*  crossAxisSpacing: 10,
-              mainAxisSpacing: 10, */
               childAspectRatio: 2/3,
             ),
             shrinkWrap: true,

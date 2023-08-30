@@ -2,7 +2,7 @@
 import 'dart:async';
 
 import 'package:e_shoes_app/constant/color_const.dart';
-import 'package:e_shoes_app/pages/forgotpassword/change_password.dart';
+import 'package:e_shoes_app/screen/forgotpassword/change_password.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/app_button_back.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';

@@ -1,5 +1,5 @@
 import 'package:e_shoes_app/constant/color_const.dart';
-import 'package:e_shoes_app/pages/init/init_screen02.dart';
+import 'package:e_shoes_app/screen/init/init_screen02.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:flutter/material.dart';
 

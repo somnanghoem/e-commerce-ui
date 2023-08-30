@@ -1,18 +1,19 @@
 import 'package:e_shoes_app/constant/color_const.dart';
-import 'package:e_shoes_app/pages/sign/signin.dart';
+import 'package:e_shoes_app/screen/sign/signin.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/app_button_back.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
+import 'package:e_shoes_app/utils/switch_toggle.dart';
 import 'package:flutter/material.dart';
 
-class ChangePasswordPage extends StatefulWidget {
-  const ChangePasswordPage({super.key});
+class SignUpPage extends StatefulWidget {
+  const SignUpPage({super.key});
 
   @override
-  State<ChangePasswordPage> createState() => _ChangePasswordPageState();
+  State<SignUpPage> createState() => _SignUpPageState();
 }
 
-class _ChangePasswordPageState extends State<ChangePasswordPage> {
+class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -25,6 +26,9 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              /*=====================
+               *    Back Button
+              *====================*/
               Padding(
                   padding: const EdgeInsets.fromLTRB(20, 30, 0, 0),
                   child: GestureDetector(
@@ -32,11 +36,14 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                       Navigator.of(context).pop();
                     },
                     child: AppButtonBack(
-                          image: "assets/images/arrow_left.png",
-                          color: ColorConst.CF5F6FA),
+                        image: "assets/images/arrow_left.png",
+                        color: ColorConst.CF5F6FA),
                   )),
+              /*=====================
+                 *   End Back Button
+                 *====================*/
               Center(
-                child: Text('New Password',
+                child: Text('Sign Up',
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 25,
@@ -44,6 +51,9 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
               )
             ],
           ),
+          /*=====================
+           *   SignUp Form
+           *=====================*/
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
             child: Column(
@@ -51,36 +61,59 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
               children: [
                 TextFormField(
                   decoration: InputDecoration(
+                    labelText: 'Username',
+                    labelStyle: TextStyle(
+                        fontSize: 15,
+                        color: Color(hexColor(ColorConst.C8F959E))),
+                    suffixIcon: Image.asset('assets/images/check.png'),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                TextFormField(
+                  decoration: InputDecoration(
                       labelText: 'Password',
                       labelStyle: TextStyle(
-                          fontSize: 15, color: Color(hexColor(ColorConst.C8F959E))),
+                          fontSize: 15,
+                          color: Color(hexColor(ColorConst.C8F959E))),
                       suffixIcon: Text(
                         'Strong',
                         style: TextStyle(
-                            fontSize: 11, color: Color(hexColor(ColorConst.C34C559))),
+                            fontSize: 11,
+                            color: Color(hexColor(ColorConst.C34C559))),
                       )),
                 ),
                 const SizedBox(height: 10),
                 TextFormField(
                   decoration: InputDecoration(
-                      labelText: 'Confirm Password',
-                      labelStyle: TextStyle(
-                          fontSize: 15, color: Color(hexColor(ColorConst.C8F959E))),
-                      suffixIcon: Text(
-                        'Strong',
-                        style: TextStyle(
-                            fontSize: 11, color: Color(hexColor(ColorConst.C34C559))),
-                      )),
+                    labelText: 'Email Address',
+                    labelStyle: TextStyle(
+                        fontSize: 15,
+                        color: Color(hexColor(ColorConst.C8F959E))),
+                    suffixIcon: Image.asset('assets/images/check.png'),
+                  ),
                 ),
+                const SizedBox(height: 30),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Remember me',
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: Color(hexColor(ColorConst.C1D1E20))),
+                    ),
+                    const SwithToggle(),
+                  ],
+                )
               ],
             ),
           ),
+          /*=====================
+           *  End SignUp Form
+           *=====================*/
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text('Please write your new password.',
-                  style: TextStyle(
-                      fontSize: 13, color: Color(hexColor(ColorConst.C8F959E)))),
               const SizedBox(height: 10),
               GestureDetector(
                   onTap: () {
@@ -93,7 +126,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                       textColor: ColorConst.CFEFEFE,
                       backgroupColor: ColorConst.C9775FA,
                       borderColor: ColorConst.C9775FA,
-                      text: "Reset Password",
+                      text: "Sign Up",
                       wSize: double.infinity,
                       htsize: 72)),
             ],

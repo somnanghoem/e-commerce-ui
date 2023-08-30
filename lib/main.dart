@@ -1,4 +1,4 @@
-import 'package:e_shoes_app/pages/init/init_sceen01.dart';
+import 'package:e_shoes_app/screen/init/init_sceen01.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {

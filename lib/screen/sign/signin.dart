@@ -1,6 +1,6 @@
 import 'package:e_shoes_app/constant/color_const.dart';
-import 'package:e_shoes_app/pages/forgotpassword/forgot_password.dart';
-import 'package:e_shoes_app/pages/home/main_screen.dart';
+import 'package:e_shoes_app/screen/forgotpassword/forgot_password.dart';
+import 'package:e_shoes_app/screen/main/main_screen.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/app_button_back.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';

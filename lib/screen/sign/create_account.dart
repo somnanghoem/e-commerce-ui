@@ -1,6 +1,6 @@
 import 'package:e_shoes_app/constant/color_const.dart';
-import 'package:e_shoes_app/pages/sign/sign_up.dart';
-import 'package:e_shoes_app/pages/sign/signin.dart';
+import 'package:e_shoes_app/screen/sign/sign_up.dart';
+import 'package:e_shoes_app/screen/sign/signin.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/app_button_icon.dart';
 import 'package:e_shoes_app/utils/app_button_back.dart';

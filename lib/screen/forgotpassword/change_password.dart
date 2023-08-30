@@ -1,19 +1,18 @@
 import 'package:e_shoes_app/constant/color_const.dart';
-import 'package:e_shoes_app/pages/sign/signin.dart';
+import 'package:e_shoes_app/screen/sign/signin.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/app_button_back.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
-import 'package:e_shoes_app/utils/switch_toggle.dart';
 import 'package:flutter/material.dart';
 
-class SignUpPage extends StatefulWidget {
-  const SignUpPage({super.key});
+class ChangePasswordPage extends StatefulWidget {
+  const ChangePasswordPage({super.key});
 
   @override
-  State<SignUpPage> createState() => _SignUpPageState();
+  State<ChangePasswordPage> createState() => _ChangePasswordPageState();
 }
 
-class _SignUpPageState extends State<SignUpPage> {
+class _ChangePasswordPageState extends State<ChangePasswordPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -26,9 +25,6 @@ class _SignUpPageState extends State<SignUpPage> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              /*=====================
-               *    Back Button
-              *====================*/
               Padding(
                   padding: const EdgeInsets.fromLTRB(20, 30, 0, 0),
                   child: GestureDetector(
@@ -36,14 +32,11 @@ class _SignUpPageState extends State<SignUpPage> {
                       Navigator.of(context).pop();
                     },
                     child: AppButtonBack(
-                        image: "assets/images/arrow_left.png",
-                        color: ColorConst.CF5F6FA),
+                          image: "assets/images/arrow_left.png",
+                          color: ColorConst.CF5F6FA),
                   )),
-              /*=====================
-                 *   End Back Button
-                 *====================*/
               Center(
-                child: Text('Sign Up',
+                child: Text('New Password',
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 25,
@@ -51,9 +44,6 @@ class _SignUpPageState extends State<SignUpPage> {
               )
             ],
           ),
-          /*=====================
-           *   SignUp Form
-           *=====================*/
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
             child: Column(
@@ -61,59 +51,36 @@ class _SignUpPageState extends State<SignUpPage> {
               children: [
                 TextFormField(
                   decoration: InputDecoration(
-                    labelText: 'Username',
-                    labelStyle: TextStyle(
-                        fontSize: 15,
-                        color: Color(hexColor(ColorConst.C8F959E))),
-                    suffixIcon: Image.asset('assets/images/check.png'),
-                  ),
-                ),
-                const SizedBox(height: 10),
-                TextFormField(
-                  decoration: InputDecoration(
                       labelText: 'Password',
                       labelStyle: TextStyle(
-                          fontSize: 15,
-                          color: Color(hexColor(ColorConst.C8F959E))),
+                          fontSize: 15, color: Color(hexColor(ColorConst.C8F959E))),
                       suffixIcon: Text(
                         'Strong',
                         style: TextStyle(
-                            fontSize: 11,
-                            color: Color(hexColor(ColorConst.C34C559))),
+                            fontSize: 11, color: Color(hexColor(ColorConst.C34C559))),
                       )),
                 ),
                 const SizedBox(height: 10),
                 TextFormField(
                   decoration: InputDecoration(
-                    labelText: 'Email Address',
-                    labelStyle: TextStyle(
-                        fontSize: 15,
-                        color: Color(hexColor(ColorConst.C8F959E))),
-                    suffixIcon: Image.asset('assets/images/check.png'),
-                  ),
+                      labelText: 'Confirm Password',
+                      labelStyle: TextStyle(
+                          fontSize: 15, color: Color(hexColor(ColorConst.C8F959E))),
+                      suffixIcon: Text(
+                        'Strong',
+                        style: TextStyle(
+                            fontSize: 11, color: Color(hexColor(ColorConst.C34C559))),
+                      )),
                 ),
-                const SizedBox(height: 30),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Remember me',
-                      style: TextStyle(
-                          fontSize: 15,
-                          color: Color(hexColor(ColorConst.C1D1E20))),
-                    ),
-                    const SwithToggle(),
-                  ],
-                )
               ],
             ),
           ),
-          /*=====================
-           *  End SignUp Form
-           *=====================*/
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              Text('Please write your new password.',
+                  style: TextStyle(
+                      fontSize: 13, color: Color(hexColor(ColorConst.C8F959E)))),
               const SizedBox(height: 10),
               GestureDetector(
                   onTap: () {
@@ -126,7 +93,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       textColor: ColorConst.CFEFEFE,
                       backgroupColor: ColorConst.C9775FA,
                       borderColor: ColorConst.C9775FA,
-                      text: "Sign Up",
+                      text: "Reset Password",
                       wSize: double.infinity,
                       htsize: 72)),
             ],

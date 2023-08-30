@@ -1,7 +1,7 @@
 import 'package:e_shoes_app/constant/color_const.dart';
-import 'package:e_shoes_app/pages/header/app_bar.dart';
-import 'package:e_shoes_app/pages/home/home_screen.dart';
-import 'package:e_shoes_app/pages/menu/menu_image_bar.dart';
+import 'package:e_shoes_app/screen/header/app_bar.dart';
+import 'package:e_shoes_app/screen/home/home_screen.dart';
+import 'package:e_shoes_app/screen/menu/menu_image_bar.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +28,6 @@ class _MainScreenState extends State<MainScreen> {
         children: [
           // Header and Serchar Bar
           const CustomAppBar(),
-          // Menu Bar
           PageStorage(bucket: bucket, child: currentScreen)
         ],
       )),
@@ -36,6 +35,9 @@ class _MainScreenState extends State<MainScreen> {
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(),
         notchMargin: 10,
+        /*================
+         *    Menu Bar
+         *================*/
         child: Container(
           height: 79,
           width: size.width,
@@ -47,7 +49,6 @@ class _MainScreenState extends State<MainScreen> {
                 minWidth: 40,
                 onPressed: () {
                   setState(() {
-                    // init screen
                     _currentTab = 0;
                     currentScreen = const HomePage();
                   });
@@ -60,7 +61,6 @@ class _MainScreenState extends State<MainScreen> {
                 minWidth: 40,
                 onPressed: () {
                   setState(() {
-                    // init screen
                     _currentTab = 1;
                     currentScreen = const HomePage();
                   });
@@ -73,7 +73,6 @@ class _MainScreenState extends State<MainScreen> {
                 minWidth: 40,
                 onPressed: () {
                   setState(() {
-                    // init screen
                     _currentTab = 2;
                     currentScreen = const HomePage();
                   });
@@ -86,7 +85,6 @@ class _MainScreenState extends State<MainScreen> {
                 minWidth: 40,
                 onPressed: () {
                   setState(() {
-                    // init screen
                     _currentTab = 3;
                     currentScreen = const HomePage();
                   });
