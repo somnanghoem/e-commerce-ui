@@ -1,3 +1,4 @@
+import 'package:e_shoes_app/constant/color_const.dart';
 import 'package:e_shoes_app/pages/header/app_bar.dart';
 import 'package:e_shoes_app/pages/home/home_screen.dart';
 import 'package:e_shoes_app/pages/menu/menu_image_bar.dart';
@@ -20,7 +21,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Color(hexColor('#FFFFFF')),
+      backgroundColor: Color(hexColor(ColorConst.CFFFFFF)),
       body: SafeArea(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

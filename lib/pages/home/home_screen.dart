@@ -1,6 +1,5 @@
-import 'package:e_shoes_app/utils/hexcolor.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:e_shoes_app/pages/product/product_box.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class HomePage extends StatefulWidget {
@@ -11,36 +10,77 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  List<Map<String, dynamic>> products = [
+    {
+      "image": "assets/products/Rectangle 568.png",
+      "description": "Nike Sportswear Club\nFleece" "Fleece",
+      "price": "\$100"
+    },
+    {
+      "image": "assets/products/Rectangle 569.png",
+      "description": "Trail Running Jacket Nike\nWindrunner",
+      "price": "\$110"
+    },
+    {
+      "image": "assets/products/Rectangle 568.png",
+      "description": "Nike Sportswear Club\nFleece",
+      "price": "\$120"
+    },
+    {
+      "image": "assets/products/Rectangle 569.png",
+      "description": "Trail Running Jacket Nike\nWindrunner",
+      "price": "\$130"
+    },
+    {
+      "image": "assets/products/Rectangle 568.png",
+      "description": "Nike Sportswear Club\nFleece",
+      "price": "\$99"
+    },
+    {
+      "image": "assets/products/Rectangle 569.png",
+      "description": "Trail Running Jacket Nike\nWindrunner",
+      "price": "\$140"
+    },
+    {
+      "image": "assets/products/Rectangle 568.png",
+      "description": "Nike Sportswear Club\nFleece",
+      "price": "\$99"
+    },
+    {
+      "image": "assets/products/Rectangle 569.png",
+      "description": "Trail Running Jacket Nike\nWindrunner",
+      "price": "\$150"
+    },
+    {
+      "image": "assets/products/Rectangle 568.png",
+      "description": "Nike Sportswear Club\nFleece",
+      "price": "\$99"
+    },
+    {
+      "image": "assets/products/Rectangle 569.png",
+      "description": "Trail Running Jacket Nike\nWindrunner",
+      "price": "\$160"
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.vertical,
-      child: Container(
-        padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
-        color: Color(hexColor('#FFFFFF')),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'New Arraival',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 25,
-                      color: Color(hexColor('#1D1E20'))),
-                ),
-                Text('View All',  style: TextStyle(
-                      fontWeight: FontWeight.w300,
-                      fontSize: 15,
-                      color: Color(hexColor('#8F959E'))))
-              ],
-            )
-          ],
-        ),
-      ),
-    );
+    return Expanded(
+        child: GridView.builder(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+             /*  crossAxisSpacing: 10,
+              mainAxisSpacing: 10, */
+              childAspectRatio: 2/3,
+            ),
+            shrinkWrap: true,
+            padding: const EdgeInsets.fromLTRB(15, 15, 0, 15),
+            itemCount: products.length,
+            itemBuilder: ((context, index) {
+              return ProductBox(
+                  image: products[index]["image"],
+                  description: products[index]["description"],
+                  price: products[index]["price"]);
+            })));
   }
-
-
 }

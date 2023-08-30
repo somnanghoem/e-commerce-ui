@@ -1,3 +1,4 @@
+import 'package:e_shoes_app/constant/color_const.dart';
 import 'package:e_shoes_app/pages/forgotpassword/verify_code.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
@@ -15,7 +16,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
   Widget build(BuildContext context) {
     return Material(
         child: Container(
-      color: Color(hexColor("#FFFFFF")),
+      color: Color(hexColor(ColorConst.CFFFFFF)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -36,7 +37,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                           image: const DecorationImage(
                               image:
                                   AssetImage("assets/images/arrow_left.png")),
-                          color: Color(hexColor("#F5F6FA")),
+                          color: Color(hexColor(ColorConst.CF5F6FA)),
                           shape: BoxShape.circle),
                     ),
                   )),
@@ -45,7 +46,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 25,
-                        color: Color(hexColor("#1D1E20")))),
+                        color: Color(hexColor(ColorConst.C1D1E20)))),
               ),
             ],
           ),
@@ -60,7 +61,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                   decoration: InputDecoration(
                     labelText: 'Email Address',
                     labelStyle: TextStyle(
-                        fontSize: 15, color: Color(hexColor("#8F959E"))),
+                        fontSize: 15, color: Color(hexColor(ColorConst.C8F959E))),
                     suffixIcon: Image.asset('assets/images/check.png'),
                   ),
                 ),
@@ -73,11 +74,11 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
               Text(
                 'Please write your email to receive a ',
                 style:
-                    TextStyle(fontSize: 15, color: Color(hexColor('#8F959E'))),
+                    TextStyle(fontSize: 15, color: Color(hexColor(ColorConst.C8F959E))),
               ),
               Text('confirmation code to set a new password.',
                   style: TextStyle(
-                      fontSize: 15, color: Color(hexColor('#8F959E')))),
+                      fontSize: 15, color: Color(hexColor(ColorConst.C8F959E)))),
               const SizedBox(height: 10),
               GestureDetector(
                   onTap: () {
@@ -87,9 +88,9 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                             builder: (context) => const VerifyCodePage()));
                   },
                   child: AppButtons(
-                      textColor: "#FEFEFE",
-                      backgroupColor: "#9775FA",
-                      borderColor: "#9775FA",
+                      textColor: ColorConst.CFEFEFE,
+                      backgroupColor: ColorConst.C9775FA,
+                      borderColor: ColorConst.C9775FA,
                       text: "Confirm Email",
                       wSize: double.infinity,
                       htsize: 72)),

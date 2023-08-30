@@ -1,3 +1,4 @@
+import 'package:e_shoes_app/constant/color_const.dart';
 import 'package:e_shoes_app/pages/sign/signin.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
@@ -16,7 +17,7 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget build(BuildContext context) {
     return Material(
         child: Container(
-      color: Color(hexColor("#FFFFFF")),
+      color: Color(hexColor( ColorConst.CFFFFFF )),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -24,6 +25,9 @@ class _SignUpPageState extends State<SignUpPage> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              /*=====================
+               *    Back Button
+              *====================*/
               Padding(
                   padding: const EdgeInsets.fromLTRB(20, 30, 0, 0),
                   child: GestureDetector(
@@ -37,19 +41,25 @@ class _SignUpPageState extends State<SignUpPage> {
                           image: const DecorationImage(
                               image:
                                   AssetImage("assets/images/arrow_left.png")),
-                          color: Color(hexColor("#F5F6FA")),
+                          color: Color(hexColor( ColorConst.CF5F6FA )),
                           shape: BoxShape.circle),
                     ),
                   )),
+                /*=====================
+                 *   End Back Button
+                 *====================*/
               Center(
                 child: Text('Sign Up',
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 25,
-                        color: Color(hexColor("#1D1E20")))),
+                        color: Color(hexColor( ColorConst.C1D1E20 )))),
               )
             ],
           ),
+          /*=====================
+           *   SignUp Form
+           *=====================*/
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
             child: Column(
@@ -59,7 +69,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   decoration: InputDecoration(
                     labelText: 'Username',
                     labelStyle: TextStyle(
-                        fontSize: 15, color: Color(hexColor("#8F959E"))),
+                        fontSize: 15, color: Color(hexColor( ColorConst.C8F959E ))),
                     suffixIcon: Image.asset('assets/images/check.png'),
                   ),
                 ),
@@ -68,11 +78,11 @@ class _SignUpPageState extends State<SignUpPage> {
                   decoration: InputDecoration(
                       labelText: 'Password',
                       labelStyle: TextStyle(
-                          fontSize: 15, color: Color(hexColor("#8F959E"))),
+                          fontSize: 15, color: Color(hexColor( ColorConst.C8F959E ))),
                       suffixIcon: Text(
                         'Strong',
                         style: TextStyle(
-                            fontSize: 11, color: Color(hexColor('#34C559'))),
+                            fontSize: 11, color: Color(hexColor( ColorConst.C34C559 ))),
                       )),
                 ),
                 const SizedBox(height: 10),
@@ -80,7 +90,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   decoration: InputDecoration(
                     labelText: 'Email Address',
                     labelStyle: TextStyle(
-                        fontSize: 15, color: Color(hexColor("#8F959E"))),
+                        fontSize: 15, color: Color(hexColor( ColorConst.C8F959E ))),
                     suffixIcon: Image.asset('assets/images/check.png'),
                   ),
                 ),
@@ -91,7 +101,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     Text(
                       'Remember me',
                       style: TextStyle(
-                          fontSize: 15, color: Color(hexColor('#1D1E20'))),
+                          fontSize: 15, color: Color(hexColor( ColorConst.C1D1E20 ))),
                     ),
                     const SwithToggle(),
                   ],
@@ -99,6 +109,9 @@ class _SignUpPageState extends State<SignUpPage> {
               ],
             ),
           ),
+          /*=====================
+           *  End SignUp Form
+           *=====================*/
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -111,9 +124,9 @@ class _SignUpPageState extends State<SignUpPage> {
                             builder: (context) => const SignInPage()));
                   },
                   child: AppButtons(
-                      textColor: "#FEFEFE",
-                      backgroupColor: "#9775FA",
-                      borderColor: "#9775FA",
+                      textColor: ColorConst.CFEFEFE,
+                      backgroupColor: ColorConst.C9775FA,
+                      borderColor: ColorConst.C9775FA,
                       text: "Sign Up",
                       wSize: double.infinity,
                       htsize: 72)),

@@ -1,3 +1,4 @@
+import 'package:e_shoes_app/constant/color_const.dart';
 import 'package:e_shoes_app/pages/sign/create_account.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
@@ -16,7 +17,7 @@ class _InitScreen02State extends State<InitScreen02> {
     double width = MediaQuery.of(context).size.width;
     return Material(
       child: Container(
-        color: Color(hexColor("#9775FA")),
+        color: Color(hexColor(ColorConst.C9775FA)),
         child: Stack(
           children: [
             Positioned(
@@ -28,7 +29,7 @@ class _InitScreen02State extends State<InitScreen02> {
               right: 20,
               child: Container(
                 decoration: BoxDecoration(
-                  color: Color(hexColor("#FFFFFF")),
+                  color: Color(hexColor(ColorConst.CFFFFFF)),
                   borderRadius: BorderRadius.circular(15),
                   boxShadow: const [
                     BoxShadow(
@@ -49,7 +50,7 @@ class _InitScreen02State extends State<InitScreen02> {
                         style: TextStyle(
                             fontWeight: FontWeight.w800,
                             fontSize: 25,
-                            color: Color(hexColor("#1D1E20")))),
+                            color: Color(hexColor(ColorConst.C1D1E20)))),
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
@@ -57,13 +58,13 @@ class _InitScreen02State extends State<InitScreen02> {
                         style: TextStyle(
                             fontWeight: FontWeight.w100,
                             fontSize: 15,
-                            color: Color(hexColor("#8F959E")))),
+                            color: Color(hexColor(ColorConst.C8F959E)))),
                   ),
                   Text('look amazing everyday.',
                       style: TextStyle(
                           fontWeight: FontWeight.w100,
                           fontSize: 15,
-                          color: Color(hexColor("#8F959E")))),
+                          color: Color(hexColor(ColorConst.C8F959E)))),
                   const SizedBox(
                     height: 10,
                   ),
@@ -71,16 +72,16 @@ class _InitScreen02State extends State<InitScreen02> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       AppButtons(
-                          textColor: "#8F959E",
-                          backgroupColor: "#F5F6FA",
-                          borderColor: "#F5F6FA",
+                          textColor: ColorConst.C8F959E,
+                          backgroupColor: ColorConst.CF5F6FA,
+                          borderColor: ColorConst.CF5F6FA,
                           text: "Men",
                           wSize: 150,
                           htsize: 60),
                       AppButtons(
-                          textColor: "#FFFFFF",
-                          backgroupColor: "#9775FA",
-                          borderColor: "#9775FA",
+                          textColor: ColorConst.CFFFFFF,
+                          backgroupColor: ColorConst.C9775FA,
+                          borderColor: ColorConst.C9775FA,
                           text: "Woman",
                           wSize: 150,
                           htsize: 60)
@@ -96,7 +97,10 @@ class _InitScreen02State extends State<InitScreen02> {
                           MaterialPageRoute(
                               builder: (context) => const CreateAccountPage()));
                     },
-                    child: Text('Skip', style: TextStyle(color: Color(hexColor("#8F959E"))),),
+                    child: Text(
+                      'Skip',
+                      style: TextStyle(color: Color(hexColor(ColorConst.C8F959E))),
+                    ),
                   )
                 ]),
               ),

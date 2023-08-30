@@ -1,3 +1,4 @@
+
 int hexColor( String color ) {
   // ignore: prefer_interpolation_to_compose_strings
   String newColor = '0xff' + color;

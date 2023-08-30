@@ -1,6 +1,7 @@
 // ignore_for_file: unnecessary_new
 import 'dart:async';
 
+import 'package:e_shoes_app/constant/color_const.dart';
 import 'package:e_shoes_app/pages/forgotpassword/change_password.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
@@ -51,7 +52,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
   Widget build(BuildContext context) {
     return Material(
         child: Container(
-      color: Color(hexColor("#FFFFFF")),
+      color: Color(hexColor(ColorConst.CFFFFFF)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -72,7 +73,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                           image: const DecorationImage(
                               image:
                                   AssetImage("assets/images/arrow_left.png")),
-                          color: Color(hexColor("#F5F6FA")),
+                          color: Color(hexColor(ColorConst.CF5F6FA)),
                           shape: BoxShape.circle),
                     ),
                   )),
@@ -81,7 +82,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 25,
-                        color: Color(hexColor("#1D1E20")))),
+                        color: Color(hexColor(ColorConst.C1D1E20)))),
               ),
             ],
           ),
@@ -101,7 +102,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                       decoration: BoxDecoration(
                           border: Border.all(
                             width: 2,
-                            color: Color(hexColor('#E7E8EA')),
+                            color: Color(hexColor(ColorConst.CE7E8EA)),
                           ),
                           borderRadius: BorderRadius.circular(15)),
                       child: TextField(
@@ -112,7 +113,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                                 {FocusScope.of(context).nextFocus()}
                             }),
                         style: TextStyle(
-                            fontSize: 22, color: Color(hexColor('#1D1E20'))),
+                            fontSize: 22, color: Color(hexColor(ColorConst.C1D1E20))),
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
                         inputFormatters: [
@@ -127,7 +128,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                       decoration: BoxDecoration(
                           border: Border.all(
                             width: 2,
-                            color: Color(hexColor('#E7E8EA')),
+                            color: Color(hexColor(ColorConst.CE7E8EA)),
                           ),
                           borderRadius: BorderRadius.circular(15)),
                       child: TextField(
@@ -138,7 +139,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                                 {FocusScope.of(context).nextFocus()}
                             }),
                         style: TextStyle(
-                            fontSize: 22, color: Color(hexColor('#1D1E20'))),
+                            fontSize: 22, color: Color(hexColor(ColorConst.C1D1E20))),
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
                         inputFormatters: [
@@ -153,7 +154,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                       decoration: BoxDecoration(
                           border: Border.all(
                             width: 2,
-                            color: Color(hexColor('#E7E8EA')),
+                            color: Color(hexColor(ColorConst.CE7E8EA)),
                           ),
                           borderRadius: BorderRadius.circular(15)),
                       child: TextField(
@@ -164,7 +165,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                                 {FocusScope.of(context).nextFocus()}
                             }),
                         style: TextStyle(
-                            fontSize: 22, color: Color(hexColor('#1D1E20'))),
+                            fontSize: 22, color: Color(hexColor(ColorConst.C1D1E20))),
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
                         inputFormatters: [
@@ -179,14 +180,14 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                       decoration: BoxDecoration(
                           border: Border.all(
                             width: 2,
-                            color: Color(hexColor('#E7E8EA')),
+                            color: Color(hexColor(ColorConst.CE7E8EA)),
                           ),
                           borderRadius: BorderRadius.circular(15)),
                       child: TextField(
                         decoration:
                             const InputDecoration(border: InputBorder.none),
                         style: TextStyle(
-                            fontSize: 22, color: Color(hexColor('#1D1E20'))),
+                            fontSize: 22, color: Color(hexColor(ColorConst.C1D1E20))),
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
                         inputFormatters: [
@@ -209,12 +210,12 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                   Text(
                     '00:$_start',
                     style: TextStyle(
-                        fontSize: 15, color: Color(hexColor('#EA4335'))),
+                        fontSize: 15, color: Color(hexColor(ColorConst.CEA4335))),
                   ),
                   Text(
                     ' resend confirmation code.',
                     style: TextStyle(
-                        fontSize: 15, color: Color(hexColor('#8F959E'))),
+                        fontSize: 15, color: Color(hexColor(ColorConst.C8F959E))),
                   ),
                 ],
               ),
@@ -227,9 +228,9 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                             builder: (context) => const ChangePasswordPage()));
                   },
                   child: AppButtons(
-                      textColor: "#FEFEFE",
-                      backgroupColor: "#9775FA",
-                      borderColor: "#9775FA",
+                      textColor: ColorConst.CFEFEFE,
+                      backgroupColor: ColorConst.C9775FA,
+                      borderColor: ColorConst.C9775FA,
                       text: "Confirm Code",
                       wSize: double.infinity,
                       htsize: 72)),

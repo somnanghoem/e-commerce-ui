@@ -1,3 +1,4 @@
+import 'package:e_shoes_app/constant/color_const.dart';
 import 'package:e_shoes_app/pages/sign/sign_up.dart';
 import 'package:e_shoes_app/pages/sign/signin.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
@@ -17,7 +18,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
   Widget build(BuildContext context) {
     return Material(
         child: Container(
-      color: Color(hexColor("#FFFFFF")),
+      color: Color(hexColor(ColorConst.CFFFFFF)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -25,6 +26,9 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              /*===================
+               *    Back Button
+               *===================*/
               Padding(
                   padding: const EdgeInsets.fromLTRB(20, 30, 0, 0),
                   child: GestureDetector(
@@ -38,50 +42,59 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                           image: const DecorationImage(
                               image:
                                   AssetImage("assets/images/arrow_left.png")),
-                          color: Color(hexColor("#F5F6FA")),
+                          color: Color(hexColor(ColorConst.CF5F6FA)),
                           shape: BoxShape.circle),
                     ),
                   )),
+              /*===================
+               * End Back Button
+               *===================*/
               Center(
                 child: Text('Let’s Get Started',
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 25,
-                        color: Color(hexColor("#1D1E20")))),
+                        color: Color(hexColor(ColorConst.C1D1E20)))),
               )
             ],
           ),
+          /*=========================
+           *  Create Account Form
+           *=========================*/
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               AppButtonsIcon(
-                  textColor: "#FFFFFF",
-                  backgroupColor: "#4267B2",
-                  borderColor: "#4267B2",
+                  textColor: ColorConst.CFFFFFF,
+                  backgroupColor: ColorConst.C4267B2,
+                  borderColor: ColorConst.C4267B2,
                   text: "Facebook",
                   imageLocation: "assets/images/facebook.png",
                   wSize: 321,
                   htsize: 50),
               const SizedBox(height: 10),
               AppButtonsIcon(
-                  textColor: "#FFFFFF",
-                  backgroupColor: "#1DA1F2",
-                  borderColor: "#1DA1F2",
+                  textColor: ColorConst.CFFFFFF,
+                  backgroupColor: ColorConst.C1DA1F2,
+                  borderColor: ColorConst.C1DA1F2,
                   text: "Twitter",
                   imageLocation: "assets/images/twitter.png",
                   wSize: 321,
                   htsize: 50),
               const SizedBox(height: 10),
               AppButtonsIcon(
-                  textColor: "#FFFFFF",
-                  backgroupColor: "#EA4335",
-                  borderColor: "#EA4335",
+                  textColor: ColorConst.CFFFFFF,
+                  backgroupColor: ColorConst.CEA4335,
+                  borderColor: ColorConst.CEA4335,
                   text: "Google",
                   imageLocation: "assets/images/google.png",
                   wSize: 321,
                   htsize: 50),
             ],
           ),
+          /*=========================
+           *  Create Account Form 
+           *=========================*/
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -90,7 +103,8 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                 children: [
                   Text(
                     "Already have an accoun?",
-                    style: TextStyle(color: Color(hexColor("#8F959E"))),
+                    style:
+                        TextStyle(color: Color(hexColor(ColorConst.C8F959E))),
                   ),
                   GestureDetector(
                     onTap: () {
@@ -101,12 +115,16 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                     },
                     child: Text(
                       "Signin",
-                      style: TextStyle(color: Color(hexColor("#1D1E20"))),
+                      style:
+                          TextStyle(color: Color(hexColor(ColorConst.C1D1E20))),
                     ),
                   )
                 ],
               ),
               const SizedBox(height: 10),
+              /*======================
+               *      SignUn Button
+               *======================*/
               GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -115,12 +133,15 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                             builder: (context) => const SignUpPage()));
                   },
                   child: AppButtons(
-                      textColor: "#FEFEFE",
-                      backgroupColor: "#9775FA",
-                      borderColor: "#9775FA",
+                      textColor: ColorConst.CFEFEFE,
+                      backgroupColor: ColorConst.C9775FA,
+                      borderColor: ColorConst.C9775FA,
                       text: "Create Account",
                       wSize: double.infinity,
                       htsize: 72)),
+              /*======================
+               *  End SignUp Button
+               *======================*/
             ],
           )
         ],

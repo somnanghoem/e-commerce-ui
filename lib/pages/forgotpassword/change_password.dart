@@ -1,3 +1,4 @@
+import 'package:e_shoes_app/constant/color_const.dart';
 import 'package:e_shoes_app/pages/sign/signin.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
@@ -15,7 +16,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
   Widget build(BuildContext context) {
     return Material(
         child: Container(
-      color: Color(hexColor("#FFFFFF")),
+      color: Color(hexColor(ColorConst.CFFFFFF)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -36,7 +37,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                           image: const DecorationImage(
                               image:
                                   AssetImage("assets/images/arrow_left.png")),
-                          color: Color(hexColor("#F5F6FA")),
+                          color: Color(hexColor(ColorConst.CF5F6FA)),
                           shape: BoxShape.circle),
                     ),
                   )),
@@ -45,7 +46,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 25,
-                        color: Color(hexColor("#1D1E20")))),
+                        color: Color(hexColor(ColorConst.C1D1E20)))),
               )
             ],
           ),
@@ -58,11 +59,11 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                   decoration: InputDecoration(
                       labelText: 'Password',
                       labelStyle: TextStyle(
-                          fontSize: 15, color: Color(hexColor("#8F959E"))),
+                          fontSize: 15, color: Color(hexColor(ColorConst.C8F959E))),
                       suffixIcon: Text(
                         'Strong',
                         style: TextStyle(
-                            fontSize: 11, color: Color(hexColor('#34C559'))),
+                            fontSize: 11, color: Color(hexColor(ColorConst.C34C559))),
                       )),
                 ),
                 const SizedBox(height: 10),
@@ -70,11 +71,11 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                   decoration: InputDecoration(
                       labelText: 'Confirm Password',
                       labelStyle: TextStyle(
-                          fontSize: 15, color: Color(hexColor("#8F959E"))),
+                          fontSize: 15, color: Color(hexColor(ColorConst.C8F959E))),
                       suffixIcon: Text(
                         'Strong',
                         style: TextStyle(
-                            fontSize: 11, color: Color(hexColor('#34C559'))),
+                            fontSize: 11, color: Color(hexColor(ColorConst.C34C559))),
                       )),
                 ),
               ],
@@ -85,7 +86,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
             children: [
               Text('Please write your new password.',
                   style: TextStyle(
-                      fontSize: 13, color: Color(hexColor('#8F959E')))),
+                      fontSize: 13, color: Color(hexColor(ColorConst.C8F959E)))),
               const SizedBox(height: 10),
               GestureDetector(
                   onTap: () {
@@ -95,9 +96,9 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                             builder: (context) => const SignInPage()));
                   },
                   child: AppButtons(
-                      textColor: "#FEFEFE",
-                      backgroupColor: "#9775FA",
-                      borderColor: "#9775FA",
+                      textColor: ColorConst.CFEFEFE,
+                      backgroupColor: ColorConst.C9775FA,
+                      borderColor: ColorConst.C9775FA,
                       text: "Reset Password",
                       wSize: double.infinity,
                       htsize: 72)),
