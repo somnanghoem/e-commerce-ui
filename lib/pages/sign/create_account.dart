@@ -3,6 +3,7 @@ import 'package:e_shoes_app/pages/sign/sign_up.dart';
 import 'package:e_shoes_app/pages/sign/signin.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/app_button_icon.dart';
+import 'package:e_shoes_app/utils/app_button_back.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:flutter/material.dart';
 
@@ -35,16 +36,9 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                     onTap: () {
                       Navigator.of(context).pop();
                     },
-                    child: Container(
-                      width: 45,
-                      height: 45,
-                      decoration: BoxDecoration(
-                          image: const DecorationImage(
-                              image:
-                                  AssetImage("assets/images/arrow_left.png")),
-                          color: Color(hexColor(ColorConst.CF5F6FA)),
-                          shape: BoxShape.circle),
-                    ),
+                    child: AppButtonBack(
+                        image: "assets/images/arrow_left.png",
+                        color: ColorConst.CF5F6FA),
                   )),
               /*===================
                * End Back Button

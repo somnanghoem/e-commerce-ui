@@ -4,6 +4,7 @@ import 'dart:async';
 import 'package:e_shoes_app/constant/color_const.dart';
 import 'package:e_shoes_app/pages/forgotpassword/change_password.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
+import 'package:e_shoes_app/utils/app_button_back.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -66,16 +67,9 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                     onTap: () {
                       Navigator.of(context).pop();
                     },
-                    child: Container(
-                      width: 45,
-                      height: 45,
-                      decoration: BoxDecoration(
-                          image: const DecorationImage(
-                              image:
-                                  AssetImage("assets/images/arrow_left.png")),
-                          color: Color(hexColor(ColorConst.CF5F6FA)),
-                          shape: BoxShape.circle),
-                    ),
+                    child: AppButtonBack(
+                        image: "assets/images/arrow_left.png",
+                        color: ColorConst.CF5F6FA),
                   )),
               Center(
                 child: Text('Verification Code',
@@ -113,7 +107,8 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                                 {FocusScope.of(context).nextFocus()}
                             }),
                         style: TextStyle(
-                            fontSize: 22, color: Color(hexColor(ColorConst.C1D1E20))),
+                            fontSize: 22,
+                            color: Color(hexColor(ColorConst.C1D1E20))),
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
                         inputFormatters: [
@@ -139,7 +134,8 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                                 {FocusScope.of(context).nextFocus()}
                             }),
                         style: TextStyle(
-                            fontSize: 22, color: Color(hexColor(ColorConst.C1D1E20))),
+                            fontSize: 22,
+                            color: Color(hexColor(ColorConst.C1D1E20))),
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
                         inputFormatters: [
@@ -165,7 +161,8 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                                 {FocusScope.of(context).nextFocus()}
                             }),
                         style: TextStyle(
-                            fontSize: 22, color: Color(hexColor(ColorConst.C1D1E20))),
+                            fontSize: 22,
+                            color: Color(hexColor(ColorConst.C1D1E20))),
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
                         inputFormatters: [
@@ -187,7 +184,8 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                         decoration:
                             const InputDecoration(border: InputBorder.none),
                         style: TextStyle(
-                            fontSize: 22, color: Color(hexColor(ColorConst.C1D1E20))),
+                            fontSize: 22,
+                            color: Color(hexColor(ColorConst.C1D1E20))),
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
                         inputFormatters: [
@@ -210,12 +208,14 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                   Text(
                     '00:$_start',
                     style: TextStyle(
-                        fontSize: 15, color: Color(hexColor(ColorConst.CEA4335))),
+                        fontSize: 15,
+                        color: Color(hexColor(ColorConst.CEA4335))),
                   ),
                   Text(
                     ' resend confirmation code.',
                     style: TextStyle(
-                        fontSize: 15, color: Color(hexColor(ColorConst.C8F959E))),
+                        fontSize: 15,
+                        color: Color(hexColor(ColorConst.C8F959E))),
                   ),
                 ],
               ),

@@ -1,6 +1,7 @@
 import 'package:e_shoes_app/constant/color_const.dart';
 import 'package:e_shoes_app/pages/forgotpassword/verify_code.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
+import 'package:e_shoes_app/utils/app_button_back.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:flutter/material.dart';
 
@@ -30,16 +31,9 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                     onTap: () {
                       Navigator.of(context).pop();
                     },
-                    child: Container(
-                      width: 45,
-                      height: 45,
-                      decoration: BoxDecoration(
-                          image: const DecorationImage(
-                              image:
-                                  AssetImage("assets/images/arrow_left.png")),
-                          color: Color(hexColor(ColorConst.CF5F6FA)),
-                          shape: BoxShape.circle),
-                    ),
+                    child: AppButtonBack(
+                        image: "assets/images/arrow_left.png",
+                        color: ColorConst.CF5F6FA),
                   )),
               Center(
                 child: Text('Forgot Password',
@@ -61,7 +55,8 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                   decoration: InputDecoration(
                     labelText: 'Email Address',
                     labelStyle: TextStyle(
-                        fontSize: 15, color: Color(hexColor(ColorConst.C8F959E))),
+                        fontSize: 15,
+                        color: Color(hexColor(ColorConst.C8F959E))),
                     suffixIcon: Image.asset('assets/images/check.png'),
                   ),
                 ),
@@ -73,12 +68,13 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
             children: [
               Text(
                 'Please write your email to receive a ',
-                style:
-                    TextStyle(fontSize: 15, color: Color(hexColor(ColorConst.C8F959E))),
+                style: TextStyle(
+                    fontSize: 15, color: Color(hexColor(ColorConst.C8F959E))),
               ),
               Text('confirmation code to set a new password.',
                   style: TextStyle(
-                      fontSize: 15, color: Color(hexColor(ColorConst.C8F959E)))),
+                      fontSize: 15,
+                      color: Color(hexColor(ColorConst.C8F959E)))),
               const SizedBox(height: 10),
               GestureDetector(
                   onTap: () {

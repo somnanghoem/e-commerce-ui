@@ -2,6 +2,7 @@ import 'package:e_shoes_app/constant/color_const.dart';
 import 'package:e_shoes_app/pages/forgotpassword/forgot_password.dart';
 import 'package:e_shoes_app/pages/home/main_screen.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
+import 'package:e_shoes_app/utils/app_button_back.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:e_shoes_app/utils/switch_toggle.dart';
 import 'package:flutter/material.dart';
@@ -32,20 +33,12 @@ class _SignInPageState extends State<SignInPage> {
               Padding(
                   padding: const EdgeInsets.fromLTRB(20, 30, 0, 0),
                   child: GestureDetector(
-                    onTap: () {
-                      Navigator.of(context).pop();
-                    },
-                    child: Container(
-                      width: 45,
-                      height: 45,
-                      decoration: BoxDecoration(
-                          image: const DecorationImage(
-                              image:
-                                  AssetImage("assets/images/arrow_left.png")),
-                          color: Color(hexColor(ColorConst.CF5F6FA)),
-                          shape: BoxShape.circle),
-                    ),
-                  )),
+                      onTap: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: AppButtonBack(
+                          image: "assets/images/arrow_left.png",
+                          color: ColorConst.CF5F6FA))),
               /*=====================
                *   End Back Button
                *=====================*/
