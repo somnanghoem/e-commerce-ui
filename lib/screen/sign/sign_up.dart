@@ -1,10 +1,10 @@
 import 'package:e_shoes_app/constant/color_const.dart';
-import 'package:e_shoes_app/screen/sign/signin.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/app_button_back.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:e_shoes_app/utils/switch_toggle.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -18,7 +18,7 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget build(BuildContext context) {
     return Material(
         child: Container(
-      color: Color(hexColor(ColorConst.CFFFFFF)),
+      color: Color(hexColor(cFFFFFF)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -35,19 +35,19 @@ class _SignUpPageState extends State<SignUpPage> {
                     onTap: () {
                       Navigator.of(context).pop();
                     },
-                    child: AppButtonBack(
+                    child: const AppButtonBack(
                         image: "assets/images/arrow_left.png",
-                        color: ColorConst.CF5F6FA),
+                        color: cF5F6FA),
                   )),
               /*=====================
                  *   End Back Button
                  *====================*/
               Center(
-                child: Text('Sign Up',
+                child: Text(AppLocalizations.of(context)!.sign_up,
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 25,
-                        color: Color(hexColor(ColorConst.C1D1E20)))),
+                        color: Color(hexColor(c1D1E20)))),
               )
             ],
           ),
@@ -61,34 +61,34 @@ class _SignUpPageState extends State<SignUpPage> {
               children: [
                 TextFormField(
                   decoration: InputDecoration(
-                    labelText: 'Username',
+                    labelText: AppLocalizations.of(context)!.sign_up_username,
                     labelStyle: TextStyle(
                         fontSize: 15,
-                        color: Color(hexColor(ColorConst.C8F959E))),
+                        color: Color(hexColor(c8F959E))),
                     suffixIcon: Image.asset('assets/images/check.png'),
                   ),
                 ),
                 const SizedBox(height: 10),
                 TextFormField(
                   decoration: InputDecoration(
-                      labelText: 'Password',
+                      labelText: AppLocalizations.of(context)!.sign_up_password,
                       labelStyle: TextStyle(
                           fontSize: 15,
-                          color: Color(hexColor(ColorConst.C8F959E))),
+                          color: Color(hexColor(c8F959E))),
                       suffixIcon: Text(
                         'Strong',
                         style: TextStyle(
                             fontSize: 11,
-                            color: Color(hexColor(ColorConst.C34C559))),
+                            color: Color(hexColor(c34C559))),
                       )),
                 ),
                 const SizedBox(height: 10),
                 TextFormField(
                   decoration: InputDecoration(
-                    labelText: 'Email Address',
+                    labelText: AppLocalizations.of(context)!.sign_up_email,
                     labelStyle: TextStyle(
                         fontSize: 15,
-                        color: Color(hexColor(ColorConst.C8F959E))),
+                        color: Color(hexColor(c8F959E))),
                     suffixIcon: Image.asset('assets/images/check.png'),
                   ),
                 ),
@@ -97,10 +97,10 @@ class _SignUpPageState extends State<SignUpPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Remember me',
+                      AppLocalizations.of(context)!.sign_up_remeber_me,
                       style: TextStyle(
                           fontSize: 15,
-                          color: Color(hexColor(ColorConst.C1D1E20))),
+                          color: Color(hexColor(c1D1E20))),
                     ),
                     const SwithToggle(),
                   ],
@@ -117,16 +117,13 @@ class _SignUpPageState extends State<SignUpPage> {
               const SizedBox(height: 10),
               GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const SignInPage()));
+                    Navigator.pushNamed(context, '/signin');
                   },
                   child: AppButtons(
-                      textColor: ColorConst.CFEFEFE,
-                      backgroupColor: ColorConst.C9775FA,
-                      borderColor: ColorConst.C9775FA,
-                      text: "Sign Up",
+                      textColor:cFEFEFE,
+                      backgroupColor: c9775FA,
+                      borderColor: c9775FA,
+                      text: AppLocalizations.of(context)!.sign_up,
                       wSize: double.infinity,
                       htsize: 72)),
             ],

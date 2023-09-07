@@ -9,7 +9,7 @@ Container menuBartImage(int currentTab, int index, String name, String image) {
           ? Text(
               name,
               style: TextStyle(
-                  color: Color(hexColor(ColorConst.C9775FA)), fontSize: 15),
+                  color: Color(hexColor(c9775FA)), fontSize: 15),
             )
           : Image(
               image: AssetImage(image),

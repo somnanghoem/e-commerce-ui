@@ -37,14 +37,14 @@ class ProductBox extends StatelessWidget {
         Text(
           description,
           style: TextStyle(
-              fontSize: 11, color: Color(hexColor(ColorConst.C1D1E20))),
+              fontSize: 11, color: Color(hexColor(c1D1E20))),
         ),
         Text(
           price,
           style: TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.w900,
-              color: Color(hexColor(ColorConst.C1D1E20))),
+              color: Color(hexColor(c1D1E20))),
         )
       ],
     );

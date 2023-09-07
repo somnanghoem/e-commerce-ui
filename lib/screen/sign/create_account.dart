@@ -1,11 +1,10 @@
 import 'package:e_shoes_app/constant/color_const.dart';
-import 'package:e_shoes_app/screen/sign/sign_up.dart';
-import 'package:e_shoes_app/screen/sign/signin.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/app_button_icon.dart';
 import 'package:e_shoes_app/utils/app_button_back.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class CreateAccountPage extends StatefulWidget {
   const CreateAccountPage({super.key});
@@ -19,7 +18,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
   Widget build(BuildContext context) {
     return Material(
         child: Container(
-      color: Color(hexColor(ColorConst.CFFFFFF)),
+      color: Color(hexColor(cFFFFFF)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -36,19 +35,19 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                     onTap: () {
                       Navigator.of(context).pop();
                     },
-                    child: AppButtonBack(
+                    child: const AppButtonBack(
                         image: "assets/images/arrow_left.png",
-                        color: ColorConst.CF5F6FA),
+                        color: cF5F6FA),
                   )),
               /*===================
                * End Back Button
                *===================*/
               Center(
-                child: Text('Let’s Get Started',
+                child: Text( AppLocalizations.of(context)!.create_account_let_start,
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 25,
-                        color: Color(hexColor(ColorConst.C1D1E20)))),
+                        color: Color(hexColor(c1D1E20)))),
               )
             ],
           ),
@@ -59,27 +58,27 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               AppButtonsIcon(
-                  textColor: ColorConst.CFFFFFF,
-                  backgroupColor: ColorConst.C4267B2,
-                  borderColor: ColorConst.C4267B2,
+                  textColor: cFFFFFF,
+                  backgroupColor: c4267B2,
+                  borderColor: c4267B2,
                   text: "Facebook",
                   imageLocation: "assets/images/facebook.png",
                   wSize: 321,
                   htsize: 50),
               const SizedBox(height: 10),
               AppButtonsIcon(
-                  textColor: ColorConst.CFFFFFF,
-                  backgroupColor: ColorConst.C1DA1F2,
-                  borderColor: ColorConst.C1DA1F2,
+                  textColor: cFFFFFF,
+                  backgroupColor: c1DA1F2,
+                  borderColor: c1DA1F2,
                   text: "Twitter",
                   imageLocation: "assets/images/twitter.png",
                   wSize: 321,
                   htsize: 50),
               const SizedBox(height: 10),
               AppButtonsIcon(
-                  textColor: ColorConst.CFFFFFF,
-                  backgroupColor: ColorConst.CEA4335,
-                  borderColor: ColorConst.CEA4335,
+                  textColor: cFFFFFF,
+                  backgroupColor: cEA4335,
+                  borderColor: cEA4335,
                   text: "Google",
                   imageLocation: "assets/images/google.png",
                   wSize: 321,
@@ -96,21 +95,18 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Already have an accoun?",
+                    AppLocalizations.of(context)!.create_account_have_account,
                     style:
-                        TextStyle(color: Color(hexColor(ColorConst.C8F959E))),
+                        TextStyle(color: Color(hexColor(c8F959E))),
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SignInPage()));
+                      Navigator.pushNamed(context, '/signin');
                     },
                     child: Text(
-                      "Signin",
+                     AppLocalizations.of(context)!.create_account_signin,
                       style:
-                          TextStyle(color: Color(hexColor(ColorConst.C1D1E20))),
+                          TextStyle(color: Color(hexColor(c1D1E20))),
                     ),
                   )
                 ],
@@ -121,16 +117,13 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                *======================*/
               GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const SignUpPage()));
+                    Navigator.pushNamed(context, '/signup');
                   },
                   child: AppButtons(
-                      textColor: ColorConst.CFEFEFE,
-                      backgroupColor: ColorConst.C9775FA,
-                      borderColor: ColorConst.C9775FA,
-                      text: "Create Account",
+                      textColor: cFEFEFE,
+                      backgroupColor: c9775FA,
+                      borderColor: c9775FA,
+                      text: AppLocalizations.of(context)!.create_account,
                       wSize: double.infinity,
                       htsize: 72)),
               /*======================

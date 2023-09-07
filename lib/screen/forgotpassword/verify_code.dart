@@ -2,12 +2,12 @@
 import 'dart:async';
 
 import 'package:e_shoes_app/constant/color_const.dart';
-import 'package:e_shoes_app/screen/forgotpassword/change_password.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/app_button_back.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class VerifyCodePage extends StatefulWidget {
   const VerifyCodePage({super.key});
@@ -53,7 +53,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
   Widget build(BuildContext context) {
     return Material(
         child: Container(
-      color: Color(hexColor(ColorConst.CFFFFFF)),
+      color: Color(hexColor(cFFFFFF)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -61,22 +61,28 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              /*======================*
+               *      Back Button 
+               *======================*/
               Padding(
                   padding: const EdgeInsets.fromLTRB(20, 30, 0, 0),
                   child: GestureDetector(
                     onTap: () {
                       Navigator.of(context).pop();
                     },
-                    child: AppButtonBack(
+                    child: const AppButtonBack(
                         image: "assets/images/arrow_left.png",
-                        color: ColorConst.CF5F6FA),
+                        color: cF5F6FA),
                   )),
+              /*======================*
+               *    End Back Button 
+               *======================*/
               Center(
-                child: Text('Verification Code',
+                child: Text(AppLocalizations.of(context)!.verify_code,
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 25,
-                        color: Color(hexColor(ColorConst.C1D1E20)))),
+                        color: Color(hexColor(c1D1E20)))),
               ),
             ],
           ),
@@ -96,7 +102,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                       decoration: BoxDecoration(
                           border: Border.all(
                             width: 2,
-                            color: Color(hexColor(ColorConst.CE7E8EA)),
+                            color: Color(hexColor(cE7E8EA)),
                           ),
                           borderRadius: BorderRadius.circular(15)),
                       child: TextField(
@@ -108,7 +114,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                             }),
                         style: TextStyle(
                             fontSize: 22,
-                            color: Color(hexColor(ColorConst.C1D1E20))),
+                            color: Color(hexColor(c1D1E20))),
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
                         inputFormatters: [
@@ -123,7 +129,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                       decoration: BoxDecoration(
                           border: Border.all(
                             width: 2,
-                            color: Color(hexColor(ColorConst.CE7E8EA)),
+                            color: Color(hexColor(cE7E8EA)),
                           ),
                           borderRadius: BorderRadius.circular(15)),
                       child: TextField(
@@ -135,7 +141,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                             }),
                         style: TextStyle(
                             fontSize: 22,
-                            color: Color(hexColor(ColorConst.C1D1E20))),
+                            color: Color(hexColor(c1D1E20))),
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
                         inputFormatters: [
@@ -150,7 +156,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                       decoration: BoxDecoration(
                           border: Border.all(
                             width: 2,
-                            color: Color(hexColor(ColorConst.CE7E8EA)),
+                            color: Color(hexColor(cE7E8EA)),
                           ),
                           borderRadius: BorderRadius.circular(15)),
                       child: TextField(
@@ -162,7 +168,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                             }),
                         style: TextStyle(
                             fontSize: 22,
-                            color: Color(hexColor(ColorConst.C1D1E20))),
+                            color: Color(hexColor(c1D1E20))),
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
                         inputFormatters: [
@@ -177,7 +183,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                       decoration: BoxDecoration(
                           border: Border.all(
                             width: 2,
-                            color: Color(hexColor(ColorConst.CE7E8EA)),
+                            color: Color(hexColor(cE7E8EA)),
                           ),
                           borderRadius: BorderRadius.circular(15)),
                       child: TextField(
@@ -185,7 +191,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                             const InputDecoration(border: InputBorder.none),
                         style: TextStyle(
                             fontSize: 22,
-                            color: Color(hexColor(ColorConst.C1D1E20))),
+                            color: Color(hexColor(c1D1E20))),
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
                         inputFormatters: [
@@ -209,29 +215,26 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                     '00:$_start',
                     style: TextStyle(
                         fontSize: 15,
-                        color: Color(hexColor(ColorConst.CEA4335))),
+                        color: Color(hexColor(cEA4335))),
                   ),
                   Text(
-                    ' resend confirmation code.',
+                    AppLocalizations.of(context)!.verify_code_resend,
                     style: TextStyle(
                         fontSize: 15,
-                        color: Color(hexColor(ColorConst.C8F959E))),
+                        color: Color(hexColor(c8F959E))),
                   ),
                 ],
               ),
               const SizedBox(height: 10),
               GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const ChangePasswordPage()));
+                    Navigator.pushNamed(context, '/change_password');
                   },
                   child: AppButtons(
-                      textColor: ColorConst.CFEFEFE,
-                      backgroupColor: ColorConst.C9775FA,
-                      borderColor: ColorConst.C9775FA,
-                      text: "Confirm Code",
+                      textColor: cFEFEFE,
+                      backgroupColor: c9775FA,
+                      borderColor: c9775FA,
+                      text:  AppLocalizations.of(context)!.confirm_code,
                       wSize: double.infinity,
                       htsize: 72)),
             ],

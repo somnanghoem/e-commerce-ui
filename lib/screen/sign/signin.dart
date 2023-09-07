@@ -1,11 +1,10 @@
 import 'package:e_shoes_app/constant/color_const.dart';
-import 'package:e_shoes_app/screen/forgotpassword/forgot_password.dart';
-import 'package:e_shoes_app/screen/main/main_screen.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/app_button_back.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:e_shoes_app/utils/switch_toggle.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
@@ -19,7 +18,7 @@ class _SignInPageState extends State<SignInPage> {
   Widget build(BuildContext context) {
     return Material(
         child: Container(
-      color: Color(hexColor(ColorConst.CFFFFFF)),
+      color: Color(hexColor(cFFFFFF)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -36,24 +35,24 @@ class _SignInPageState extends State<SignInPage> {
                       onTap: () {
                         Navigator.of(context).pop();
                       },
-                      child: AppButtonBack(
+                      child: const AppButtonBack(
                           image: "assets/images/arrow_left.png",
-                          color: ColorConst.CF5F6FA))),
+                          color: cF5F6FA))),
               /*=====================
                *   End Back Button
                *=====================*/
               Center(
-                child: Text('Welcome',
+                child: Text(AppLocalizations.of(context)!.signin_wellcome,
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 25,
-                        color: Color(hexColor(ColorConst.C1D1E20)))),
+                        color: Color(hexColor(c1D1E20)))),
               ),
               Center(
-                child: Text('Please enter your data to continue',
+                child: Text(AppLocalizations.of(context)!.signin_wellcome_description,
                     style: TextStyle(
                         fontSize: 15,
-                        color: Color(hexColor(ColorConst.C8F959E)))),
+                        color: Color(hexColor(c8F959E)))),
               ),
             ],
           ),
@@ -67,25 +66,25 @@ class _SignInPageState extends State<SignInPage> {
               children: [
                 TextFormField(
                   decoration: InputDecoration(
-                    labelText: 'Username',
+                    labelText: AppLocalizations.of(context)!.sign_up_username,
                     labelStyle: TextStyle(
                         fontSize: 15,
-                        color: Color(hexColor(ColorConst.C8F959E))),
+                        color: Color(hexColor(c8F959E))),
                     suffixIcon: Image.asset('assets/images/check.png'),
                   ),
                 ),
                 const SizedBox(height: 10),
                 TextFormField(
                   decoration: InputDecoration(
-                      labelText: 'Password',
+                      labelText: AppLocalizations.of(context)!.sign_up_password,
                       labelStyle: TextStyle(
                           fontSize: 15,
-                          color: Color(hexColor(ColorConst.C8F959E))),
+                          color: Color(hexColor(c8F959E))),
                       suffixIcon: Text(
                         'Strong',
                         style: TextStyle(
                             fontSize: 11,
-                            color: Color(hexColor(ColorConst.C34C559))),
+                            color: Color(hexColor(c34C559))),
                       )),
                 ),
                 const SizedBox(height: 20),
@@ -94,17 +93,13 @@ class _SignInPageState extends State<SignInPage> {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    const ForgotPasswordPage()));
+                        Navigator.pushNamed(context, '/forgot_password');
                       },
                       child: Text(
-                        'Forgot password?',
+                        AppLocalizations.of(context)!.forgot_password,
                         style: TextStyle(
                             fontSize: 15,
-                            color: Color(hexColor(ColorConst.CEA4335))),
+                            color: Color(hexColor(cEA4335))),
                       ),
                     )
                   ],
@@ -114,10 +109,10 @@ class _SignInPageState extends State<SignInPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Remember me',
+                      AppLocalizations.of(context)!.sign_up_remeber_me,
                       style: TextStyle(
                           fontSize: 15,
-                          color: Color(hexColor(ColorConst.C1D1E20))),
+                          color: Color(hexColor(c1D1E20))),
                     ),
                     const SwithToggle(),
                   ],
@@ -132,27 +127,24 @@ class _SignInPageState extends State<SignInPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'By connecting your account confirm that you agree',
+                AppLocalizations.of(context)!.signin_term1,
                 style: TextStyle(
-                    fontSize: 15, color: Color(hexColor(ColorConst.C8F959E))),
+                    fontSize: 15, color: Color(hexColor(c8F959E))),
               ),
-              Text('with our Term and Condition',
+              Text(AppLocalizations.of(context)!.signin_term2,
                   style: TextStyle(
                       fontSize: 15,
-                      color: Color(hexColor(ColorConst.C8F959E)))),
+                      color: Color(hexColor(c8F959E)))),
               const SizedBox(height: 10),
               GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const MainScreen()));
+                    Navigator.pushNamed(context, '/main');
                   },
                   child: AppButtons(
-                      textColor: ColorConst.CFEFEFE,
-                      backgroupColor: ColorConst.C9775FA,
-                      borderColor: ColorConst.C9775FA,
-                      text: "Login",
+                      textColor: cFEFEFE,
+                      backgroupColor: c9775FA,
+                      borderColor: c9775FA,
+                      text: AppLocalizations.of(context)!.login,
                       wSize: double.infinity,
                       htsize: 72)),
             ],

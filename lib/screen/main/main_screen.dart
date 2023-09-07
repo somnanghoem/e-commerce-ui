@@ -2,6 +2,7 @@ import 'package:e_shoes_app/constant/color_const.dart';
 import 'package:e_shoes_app/screen/header/app_bar.dart';
 import 'package:e_shoes_app/screen/home/home_screen.dart';
 import 'package:e_shoes_app/screen/menu/menu_image_bar.dart';
+import 'package:e_shoes_app/screen/sidebar/sidbar.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:flutter/material.dart';
 
@@ -15,13 +16,59 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int _currentTab = 0;
   final PageStorageBucket bucket = PageStorageBucket();
-  Widget currentScreen = HomePage();
+  Widget currentScreen = const HomePage();
 
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Color(hexColor(ColorConst.CFFFFFF)),
+      backgroundColor: Color(hexColor(cFFFFFF)),
+      /*=====================*
+       *    Sidebar menu
+       *=====================*/
+      drawer: const SideBar(),
+      /*=====================*
+       *   End Sidebar menu
+       *=====================*/
+      appBar: AppBar(
+        backgroundColor: Color(hexColor(cFFFFFF)),
+        elevation: 0,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 10, 15, 0),
+            child: Container(
+              width: 45,
+              height: 45,
+              decoration: BoxDecoration(
+                  image: const DecorationImage(
+                      image: AssetImage("assets/images/Cart.png")),
+                  color: Color(hexColor(cF5F6FA)),
+                  shape: BoxShape.circle),
+            ),
+          ),
+        ],
+        leading: Builder(builder: (context) {
+          return Padding(
+            padding: const EdgeInsets.fromLTRB(15, 10, 0, 0),
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  Scaffold.of(context).openDrawer();
+                });
+              },
+              child: Container(
+                width: 45,
+                height: 45,
+                decoration: BoxDecoration(
+                    image: const DecorationImage(
+                        image: AssetImage("assets/images/menu.png")),
+                    color: Color(hexColor(cF5F6FA)),
+                    shape: BoxShape.circle),
+              ),
+            ),
+          );
+        }),
+      ),
       body: SafeArea(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

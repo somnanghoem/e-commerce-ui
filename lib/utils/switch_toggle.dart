@@ -18,7 +18,7 @@ class _SwithToggleState extends State<SwithToggle> {
       (Set<MaterialState> states) {
         // Track color when the switch is selected.
         if (states.contains(MaterialState.selected)) {
-          return Color(hexColor( ColorConst.C34C759 ));
+          return Color(hexColor( c34C759 ));
         }
         // Otherwise return null to set default track color
         // for remaining states such as when the switch is
@@ -31,7 +31,7 @@ class _SwithToggleState extends State<SwithToggle> {
       (Set<MaterialState> states) {
         // Material color when switch is selected.
         if (states.contains(MaterialState.selected)) {
-          return Color(hexColor( ColorConst.C34C759 ));
+          return Color(hexColor( c34C759 ));
         }
         // Material color when switch is disabled.
         if (states.contains(MaterialState.disabled)) {
@@ -49,7 +49,7 @@ class _SwithToggleState extends State<SwithToggle> {
       value: light,
       overlayColor: overlayColor,
       trackColor: trackColor,
-      thumbColor: MaterialStatePropertyAll<Color>( Color(hexColor( ColorConst.CFFFFFF ))),
+      thumbColor: MaterialStatePropertyAll<Color>( Color(hexColor( cFFFFFF ))),
       onChanged: (bool value) {
         // This is called when the user toggles the switch.
         setState(() {

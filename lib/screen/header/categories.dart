@@ -47,9 +47,9 @@ class CategoriesCard extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       height: 60,
       decoration: BoxDecoration(
-          color: Color(hexColor(ColorConst.CF5F6FA)),
+          color: Color(hexColor(cF5F6FA)),
           borderRadius: BorderRadius.circular(15),
-          border: Border.all(color: Color(hexColor(ColorConst.CF5F6FA)), width: 1.1)),
+          border: Border.all(color: Color(hexColor(cF5F6FA)), width: 1.1)),
       child: Row(
         children: [
           Container(
@@ -58,13 +58,13 @@ class CategoriesCard extends StatelessWidget {
             height: 50,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Color(hexColor(ColorConst.CFEFEFE)),
+                color: Color(hexColor(cFEFEFE)),
                 image: DecorationImage(image: AssetImage(image))),
           ),
           const SizedBox(width: 10,),
           Text(
             text,
-            style: TextStyle( fontSize: 15, fontWeight: FontWeight.w700, color: Color(hexColor(ColorConst.C1D1E20))),
+            style: TextStyle( fontSize: 15, fontWeight: FontWeight.w700, color: Color(hexColor(c1D1E20))),
           )
         ],
       ),

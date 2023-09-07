@@ -1,8 +1,8 @@
 import 'package:e_shoes_app/constant/color_const.dart';
-import 'package:e_shoes_app/screen/sign/create_account.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class InitScreen02 extends StatefulWidget {
   const InitScreen02({super.key});
@@ -10,14 +10,14 @@ class InitScreen02 extends StatefulWidget {
   @override
   State<InitScreen02> createState() => _InitScreen02State();
 }
-
+ 
 class _InitScreen02State extends State<InitScreen02> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Material(
       child: Container(
-        color: Color(hexColor(ColorConst.C9775FA)),
+        color: Color(hexColor(c9775FA)),
         child: Stack(
           children: [
             Positioned(
@@ -29,7 +29,7 @@ class _InitScreen02State extends State<InitScreen02> {
               right: 20,
               child: Container(
                 decoration: BoxDecoration(
-                  color: Color(hexColor(ColorConst.CFFFFFF)),
+                  color: Color(hexColor(cFFFFFF)),
                   borderRadius: BorderRadius.circular(15),
                   boxShadow: const [
                     BoxShadow(
@@ -46,25 +46,25 @@ class _InitScreen02State extends State<InitScreen02> {
                 child: Column(children: [
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
-                    child: Text('Look Good, Feel Good',
+                    child: Text( AppLocalizations.of(context)!.text01,
                         style: TextStyle(
                             fontWeight: FontWeight.w800,
                             fontSize: 25,
-                            color: Color(hexColor(ColorConst.C1D1E20)))),
+                            color: Color(hexColor(c1D1E20)))),
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
-                    child: Text('Create your individual & unique style and ',
+                    child: Text( AppLocalizations.of(context)!.text02,
                         style: TextStyle(
                             fontWeight: FontWeight.w100,
                             fontSize: 15,
-                            color: Color(hexColor(ColorConst.C8F959E)))),
+                            color: Color(hexColor(c8F959E)))),
                   ),
-                  Text('look amazing everyday.',
+                  Text( AppLocalizations.of(context)!.text03,
                       style: TextStyle(
                           fontWeight: FontWeight.w100,
                           fontSize: 15,
-                          color: Color(hexColor(ColorConst.C8F959E)))),
+                          color: Color(hexColor(c8F959E)))),
                   const SizedBox(
                     height: 10,
                   ),
@@ -72,17 +72,17 @@ class _InitScreen02State extends State<InitScreen02> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       AppButtons(
-                          textColor: ColorConst.C8F959E,
-                          backgroupColor: ColorConst.CF5F6FA,
-                          borderColor: ColorConst.CF5F6FA,
-                          text: "Men",
+                          textColor: c8F959E,
+                          backgroupColor: cF5F6FA,
+                          borderColor: cF5F6FA,
+                          text: AppLocalizations.of(context)!.men,
                           wSize: 150,
                           htsize: 60),
                       AppButtons(
-                          textColor: ColorConst.CFFFFFF,
-                          backgroupColor: ColorConst.C9775FA,
-                          borderColor: ColorConst.C9775FA,
-                          text: "Woman",
+                          textColor: cFFFFFF,
+                          backgroupColor: c9775FA,
+                          borderColor: c9775FA,
+                          text: AppLocalizations.of(context)!.woman,
                           wSize: 150,
                           htsize: 60)
                     ],
@@ -92,14 +92,11 @@ class _InitScreen02State extends State<InitScreen02> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const CreateAccountPage()));
+                      Navigator.pushNamed(context, '/create_account');
                     },
                     child: Text(
-                      'Skip',
-                      style: TextStyle(color: Color(hexColor(ColorConst.C8F959E))),
+                      AppLocalizations.of(context)!.skip,
+                      style: TextStyle(color: Color(hexColor(c8F959E))),
                     ),
                   )
                 ]),

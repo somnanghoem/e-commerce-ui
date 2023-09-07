@@ -1,17 +1,19 @@
+  // Color Const
+
+const cFFFFFF = "#FFFFFF"; // White
+  const c34C759 = "#34C759"; // Light Green
+  const cFEFEFE = "#FEFEFE";
+  const c9775FA = "#9775FA";
+  const c8F959E = "#8F959E";
+  const c1D1E20 = "#1D1E20";
+  const cEA4335 = "#EA4335";
+  const c34C559 = "#C34C559";
+  const cF5F6FA = "#F5F6FA";
+  const c4267B2 = "#4267B2";
+  const c1DA1F2 = "#1DA1F2";
+  const cE7E8EA = "#E7E8EA";
+  const cF5F5F5 = "#F5F5F5";
+  const c283593 = "#283593";
+  const c808080 = "#808080";
 
 
-// ignore_for_file: non_constant_identifier_names
-class ColorConst{
-  static String CFFFFFF = "#FFFFFF"; // White
-  static String C34C759 = "#34C759"; // Light Green
-  static String CFEFEFE = "#FEFEFE";
-  static String C9775FA = "#9775FA";
-  static String C8F959E = "#8F959E";
-  static String C1D1E20 = "#1D1E20";
-  static String CEA4335 = "#EA4335";
-  static String C34C559 = "#C34C559";
-  static String CF5F6FA = "#F5F6FA";
-  static String C4267B2 = "#4267B2";
-  static String C1DA1F2 = "#1DA1F2";
-  static String CE7E8EA = "#E7E8EA";
-}

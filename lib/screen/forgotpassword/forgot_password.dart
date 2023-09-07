@@ -1,9 +1,9 @@
 import 'package:e_shoes_app/constant/color_const.dart';
-import 'package:e_shoes_app/screen/forgotpassword/verify_code.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/app_button_back.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ForgotPasswordPage extends StatefulWidget {
   const ForgotPasswordPage({super.key});
@@ -17,7 +17,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
   Widget build(BuildContext context) {
     return Material(
         child: Container(
-      color: Color(hexColor(ColorConst.CFFFFFF)),
+      color: Color(hexColor(cFFFFFF)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -25,22 +25,28 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              /*======================*
+               *      Back Button 
+               *======================*/
               Padding(
                   padding: const EdgeInsets.fromLTRB(20, 30, 0, 0),
                   child: GestureDetector(
                     onTap: () {
                       Navigator.of(context).pop();
                     },
-                    child: AppButtonBack(
+                    child: const AppButtonBack(
                         image: "assets/images/arrow_left.png",
-                        color: ColorConst.CF5F6FA),
+                        color: cF5F6FA),
                   )),
+              /*======================*
+               *    End Back Button 
+               *======================*/
               Center(
-                child: Text('Forgot Password',
+                child: Text(AppLocalizations.of(context)!.forgot_password_01,
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 25,
-                        color: Color(hexColor(ColorConst.C1D1E20)))),
+                        color: Color(hexColor(c1D1E20)))),
               ),
             ],
           ),
@@ -53,10 +59,10 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                 const SizedBox(height: 30),
                 TextFormField(
                   decoration: InputDecoration(
-                    labelText: 'Email Address',
+                    labelText: AppLocalizations.of(context)!.sign_up_email,
                     labelStyle: TextStyle(
                         fontSize: 15,
-                        color: Color(hexColor(ColorConst.C8F959E))),
+                        color: Color(hexColor(c8F959E))),
                     suffixIcon: Image.asset('assets/images/check.png'),
                   ),
                 ),
@@ -67,27 +73,24 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'Please write your email to receive a ',
+                AppLocalizations.of(context)!.forgot_password_term1,
                 style: TextStyle(
-                    fontSize: 15, color: Color(hexColor(ColorConst.C8F959E))),
+                    fontSize: 15, color: Color(hexColor(c8F959E))),
               ),
-              Text('confirmation code to set a new password.',
+              Text(AppLocalizations.of(context)!.forgot_password_term2,
                   style: TextStyle(
                       fontSize: 15,
-                      color: Color(hexColor(ColorConst.C8F959E)))),
+                      color: Color(hexColor(c8F959E)))),
               const SizedBox(height: 10),
               GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const VerifyCodePage()));
+                    Navigator.pushNamed(context, '/verifycode');
                   },
                   child: AppButtons(
-                      textColor: ColorConst.CFEFEFE,
-                      backgroupColor: ColorConst.C9775FA,
-                      borderColor: ColorConst.C9775FA,
-                      text: "Confirm Email",
+                      textColor: cFEFEFE,
+                      backgroupColor: c9775FA,
+                      borderColor: c9775FA,
+                      text: AppLocalizations.of(context)!.confirm_email,
                       wSize: double.infinity,
                       htsize: 72)),
             ],
