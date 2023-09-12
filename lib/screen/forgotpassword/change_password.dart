@@ -1,18 +1,18 @@
 import 'package:e_shoes_app/constant/color_const.dart';
+import 'package:e_shoes_app/constant/language_constants.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/app_button_back.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class ChangePasswordPage extends StatefulWidget {
-  const ChangePasswordPage({super.key});
+class ChangePasswordScreen extends StatefulWidget {
+  const ChangePasswordScreen({super.key});
 
   @override
-  State<ChangePasswordPage> createState() => _ChangePasswordPageState();
+  State<ChangePasswordScreen> createState() => _ChangePasswordScreenState();
 }
 
-class _ChangePasswordPageState extends State<ChangePasswordPage> {
+class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -42,7 +42,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                *    End Back Button 
                *======================*/
               Center(
-                child: Text(AppLocalizations.of(context)!.new_password,
+                child: Text( translation(context).new_password,
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 25,
@@ -57,7 +57,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
               children: [
                 TextFormField(
                   decoration: InputDecoration(
-                      labelText: AppLocalizations.of(context)!.sign_up_password,
+                      labelText: translation(context).sign_up_password,
                       labelStyle: TextStyle(
                           fontSize: 15,
                           color: Color(hexColor(c8F959E))),
@@ -71,7 +71,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                 const SizedBox(height: 10),
                 TextFormField(
                   decoration: InputDecoration(
-                      labelText: AppLocalizations.of(context)!.confirm_password,
+                      labelText: translation(context).confirm_password,
                       labelStyle: TextStyle(
                           fontSize: 15,
                           color: Color(hexColor(c8F959E))),
@@ -85,10 +85,13 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
               ],
             ),
           ),
+          /*====================*
+           *    SignIn Button 
+           *====================*/
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text(AppLocalizations.of(context)!.change_password_term,
+              Text( translation(context).change_password_term,
                   style: TextStyle(
                       fontSize: 13,
                       color: Color(hexColor(c8F959E)))),
@@ -101,11 +104,14 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                       textColor: cFEFEFE,
                       backgroupColor: c9775FA,
                       borderColor: c9775FA,
-                      text: AppLocalizations.of(context)!.reset_password,
+                      text: translation(context).reset_password,
                       wSize: double.infinity,
                       htsize: 72)),
             ],
           )
+          /*=====================*
+           *  End SignIn Button
+           *=====================*/
         ],
       ),
     ));

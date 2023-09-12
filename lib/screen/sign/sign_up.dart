@@ -1,10 +1,10 @@
 import 'package:e_shoes_app/constant/color_const.dart';
+import 'package:e_shoes_app/constant/language_constants.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/app_button_back.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:e_shoes_app/utils/switch_toggle.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -43,7 +43,7 @@ class _SignUpPageState extends State<SignUpPage> {
                  *   End Back Button
                  *====================*/
               Center(
-                child: Text(AppLocalizations.of(context)!.sign_up,
+                child: Text(translation(context).sign_up,
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 25,
@@ -61,7 +61,7 @@ class _SignUpPageState extends State<SignUpPage> {
               children: [
                 TextFormField(
                   decoration: InputDecoration(
-                    labelText: AppLocalizations.of(context)!.sign_up_username,
+                    labelText: translation(context).sign_up_username,
                     labelStyle: TextStyle(
                         fontSize: 15,
                         color: Color(hexColor(c8F959E))),
@@ -71,7 +71,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 const SizedBox(height: 10),
                 TextFormField(
                   decoration: InputDecoration(
-                      labelText: AppLocalizations.of(context)!.sign_up_password,
+                      labelText: translation(context).sign_up_password,
                       labelStyle: TextStyle(
                           fontSize: 15,
                           color: Color(hexColor(c8F959E))),
@@ -85,7 +85,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 const SizedBox(height: 10),
                 TextFormField(
                   decoration: InputDecoration(
-                    labelText: AppLocalizations.of(context)!.sign_up_email,
+                    labelText: translation(context).sign_up_email,
                     labelStyle: TextStyle(
                         fontSize: 15,
                         color: Color(hexColor(c8F959E))),
@@ -97,7 +97,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      AppLocalizations.of(context)!.sign_up_remeber_me,
+                      translation(context).sign_up_remeber_me,
                       style: TextStyle(
                           fontSize: 15,
                           color: Color(hexColor(c1D1E20))),
@@ -123,7 +123,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       textColor:cFEFEFE,
                       backgroupColor: c9775FA,
                       borderColor: c9775FA,
-                      text: AppLocalizations.of(context)!.sign_up,
+                      text: translation(context).sign_up,
                       wSize: double.infinity,
                       htsize: 72)),
             ],

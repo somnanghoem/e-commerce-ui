@@ -1,10 +1,10 @@
 import 'package:e_shoes_app/constant/color_const.dart';
+import 'package:e_shoes_app/constant/language_constants.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/app_button_icon.dart';
 import 'package:e_shoes_app/utils/app_button_back.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class CreateAccountPage extends StatefulWidget {
   const CreateAccountPage({super.key});
@@ -43,7 +43,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                * End Back Button
                *===================*/
               Center(
-                child: Text( AppLocalizations.of(context)!.create_account_let_start,
+                child: Text( translation(context).create_account_let_start,
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 25,
@@ -95,7 +95,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    AppLocalizations.of(context)!.create_account_have_account,
+                    translation(context).create_account_have_account,
                     style:
                         TextStyle(color: Color(hexColor(c8F959E))),
                   ),
@@ -104,7 +104,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                       Navigator.pushNamed(context, '/signin');
                     },
                     child: Text(
-                     AppLocalizations.of(context)!.create_account_signin,
+                     translation(context).create_account_signin,
                       style:
                           TextStyle(color: Color(hexColor(c1D1E20))),
                     ),
@@ -123,7 +123,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                       textColor: cFEFEFE,
                       backgroupColor: c9775FA,
                       borderColor: c9775FA,
-                      text: AppLocalizations.of(context)!.create_account,
+                      text: translation(context).create_account,
                       wSize: double.infinity,
                       htsize: 72)),
               /*======================

@@ -1,9 +1,9 @@
 import 'package:e_shoes_app/constant/color_const.dart';
+import 'package:e_shoes_app/constant/language_constants.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/app_button_back.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ForgotPasswordPage extends StatefulWidget {
   const ForgotPasswordPage({super.key});
@@ -42,7 +42,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                *    End Back Button 
                *======================*/
               Center(
-                child: Text(AppLocalizations.of(context)!.forgot_password_01,
+                child: Text(translation(context).forgot_password_01,
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 25,
@@ -59,7 +59,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                 const SizedBox(height: 30),
                 TextFormField(
                   decoration: InputDecoration(
-                    labelText: AppLocalizations.of(context)!.sign_up_email,
+                    labelText: translation(context).sign_up_email,
                     labelStyle: TextStyle(
                         fontSize: 15,
                         color: Color(hexColor(c8F959E))),
@@ -73,11 +73,11 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                AppLocalizations.of(context)!.forgot_password_term1,
+                translation(context).forgot_password_term1,
                 style: TextStyle(
                     fontSize: 15, color: Color(hexColor(c8F959E))),
               ),
-              Text(AppLocalizations.of(context)!.forgot_password_term2,
+              Text(translation(context).forgot_password_term2,
                   style: TextStyle(
                       fontSize: 15,
                       color: Color(hexColor(c8F959E)))),
@@ -90,7 +90,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                       textColor: cFEFEFE,
                       backgroupColor: c9775FA,
                       borderColor: c9775FA,
-                      text: AppLocalizations.of(context)!.confirm_email,
+                      text: translation(context).confirm_email,
                       wSize: double.infinity,
                       htsize: 72)),
             ],

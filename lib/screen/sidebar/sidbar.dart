@@ -1,8 +1,8 @@
 import 'package:e_shoes_app/constant/color_const.dart';
+import 'package:e_shoes_app/constant/language_constants.dart';
 import 'package:e_shoes_app/screen/sidebar/sidebar_menu.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SideBar extends StatefulWidget {
   const SideBar({super.key});
@@ -93,22 +93,22 @@ class _MyWidgetState extends State<SideBar> {
                 height: 20,
               ),
               SideBarMenu(
-                text: AppLocalizations.of(context)!.my_account,
+                text: translation(context).my_account,
                 icon: "assets/icons/User.svg",
                 press: () => {},
               ),
               SideBarMenu(
-                text: AppLocalizations.of(context)!.notifications,
+                text: translation(context).notifications,
                 icon: "assets/icons/Bell.svg",
                 press: () {},
               ),
               SideBarMenu(
-                text: AppLocalizations.of(context)!.settings,
+                text: translation(context).settings,
                 icon: "assets/icons/Settings.svg",
                 press: () {},
               ),
               SideBarMenu(
-                text: AppLocalizations.of(context)!.language,
+                text: translation(context).language,
                 icon: "assets/icons/language.svg",
                 press: () {
                   setState(() {
@@ -118,12 +118,12 @@ class _MyWidgetState extends State<SideBar> {
                 },
               ),
               SideBarMenu(
-                text: AppLocalizations.of(context)!.help_center,
+                text: translation(context).help_center,
                 icon: "assets/icons/Question mark.svg",
                 press: () {},
               ),
               SideBarMenu(
-                text: AppLocalizations.of(context)!.log_out,
+                text: translation(context).log_out,
                 icon: "assets/icons/Logout.svg",
                 press: () {
                   Navigator.pushNamed(context, '/signin');

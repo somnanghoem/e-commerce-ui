@@ -1,5 +1,6 @@
 import 'package:e_shoes_app/constant/color_const.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
+import 'package:e_shoes_app/utils/mobile_screen_size.dart';
 import 'package:flutter/cupertino.dart';
 
 class Categories extends StatelessWidget {
@@ -42,10 +43,15 @@ class CategoriesCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.of(context).size.width;
     return Container(
-      margin: const EdgeInsets.fromLTRB(0, 0, 15, 0),
-      padding: const EdgeInsets.all(10),
-      height: 60,
+      margin: screenWidth <= mobileScreenSize.IPHONE_X.width
+          ? const EdgeInsets.fromLTRB(0, 0, 15, 0)
+          : const EdgeInsets.fromLTRB(0, 0, 10, 0),
+      padding: screenWidth <= mobileScreenSize.IPHONE_X.width
+          ? const EdgeInsets.all(10)
+          : const EdgeInsets.all(5),
+      height: screenWidth <= mobileScreenSize.IPHONE_X.width ? 40 : 60,
       decoration: BoxDecoration(
           color: Color(hexColor(cF5F6FA)),
           borderRadius: BorderRadius.circular(15),
@@ -53,19 +59,22 @@ class CategoriesCard extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
-            width: 50,
-            height: 50,
+            padding: screenWidth <= mobileScreenSize.IPHONE_X.width
+                ? const EdgeInsets.fromLTRB(15, 0, 15, 0)
+                : const EdgeInsets.fromLTRB(10, 0, 10, 0),
+            width: screenWidth <= mobileScreenSize.IPHONE_X.width ? 30 : 50,
+            height: screenWidth <= mobileScreenSize.IPHONE_X.width ? 30 : 50,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 color: Color(hexColor(cFEFEFE)),
                 image: DecorationImage(image: AssetImage(image))),
           ),
-          const SizedBox(width: 10,),
-          Text(
-            text,
-            style: TextStyle( fontSize: 15, fontWeight: FontWeight.w700, color: Color(hexColor(c1D1E20))),
-          )
+          SizedBox(
+            width: screenWidth <= mobileScreenSize.IPHONE_X.width ? 10 : 5,
+          ),
+          Text(text,
+              style:
+                  customTextStyle15Bold(screenWidth, c1D1E20, FontWeight.w700))
         ],
       ),
     );

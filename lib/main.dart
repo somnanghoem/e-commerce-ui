@@ -63,7 +63,7 @@ class _ECommerceAppState extends State<ECommerceApp> {
         '/signup'           :(context) => const SignUpPage(),
         '/forgot_password'  :(context) => const ForgotPasswordPage(),
         '/verifycode'       :(context) => const VerifyCodePage(),
-        '/change_password'  :(context) => const ChangePasswordPage(),
+        '/change_password'  :(context) => const ChangePasswordScreen(),
         '/main'             :(context) => const MainScreen(),
         '/change_language'  :(context) => const ChangeLanguageScreen(),
       },

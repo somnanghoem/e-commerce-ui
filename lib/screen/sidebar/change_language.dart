@@ -6,7 +6,6 @@ import 'package:e_shoes_app/utils/app_button_back.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ChangeLanguageScreen extends StatefulWidget {
   const ChangeLanguageScreen({super.key});
@@ -66,7 +65,7 @@ class _ChangeLanguageScreenState extends State<ChangeLanguageScreen> {
                * End Back Button
                *===================*/
               Center(
-                child: Text( AppLocalizations.of(context)!.change_language,
+                child: Text( translation(context).change_language,
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 25,
@@ -99,7 +98,7 @@ class _ChangeLanguageScreenState extends State<ChangeLanguageScreen> {
                         width: 20,
                       ),
                       Text(
-                        AppLocalizations.of(context)!.khmer,
+                        translation(context).khmer,
                         style: TextStyle(color: Color(hexColor(cFFFFFF))),
                       )
                     ],
@@ -133,7 +132,7 @@ class _ChangeLanguageScreenState extends State<ChangeLanguageScreen> {
                           width: 20,
                         ),
                         Text(
-                          AppLocalizations.of(context)!.english,
+                          translation(context).english,
                           style: TextStyle(color: Color(hexColor(cFFFFFF))),
                         )
                       ],
@@ -169,7 +168,7 @@ class _ChangeLanguageScreenState extends State<ChangeLanguageScreen> {
                       textColor: cFEFEFE,
                       backgroupColor: c9775FA,
                       borderColor: c9775FA,
-                      text: AppLocalizations.of(context)!.save,
+                      text: translation(context).save,
                       wSize: double.infinity,
                       htsize: 72)),
               /*======================

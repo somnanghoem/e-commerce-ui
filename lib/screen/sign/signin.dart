@@ -1,10 +1,10 @@
 import 'package:e_shoes_app/constant/color_const.dart';
+import 'package:e_shoes_app/constant/language_constants.dart';
 import 'package:e_shoes_app/utils/app_button.dart';
 import 'package:e_shoes_app/utils/app_button_back.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:e_shoes_app/utils/switch_toggle.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
@@ -42,14 +42,14 @@ class _SignInPageState extends State<SignInPage> {
                *   End Back Button
                *=====================*/
               Center(
-                child: Text(AppLocalizations.of(context)!.signin_wellcome,
+                child: Text(translation(context).signin_wellcome,
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 25,
                         color: Color(hexColor(c1D1E20)))),
               ),
               Center(
-                child: Text(AppLocalizations.of(context)!.signin_wellcome_description,
+                child: Text(translation(context).signin_wellcome_description,
                     style: TextStyle(
                         fontSize: 15,
                         color: Color(hexColor(c8F959E)))),
@@ -66,7 +66,7 @@ class _SignInPageState extends State<SignInPage> {
               children: [
                 TextFormField(
                   decoration: InputDecoration(
-                    labelText: AppLocalizations.of(context)!.sign_up_username,
+                    labelText: translation(context).sign_up_username,
                     labelStyle: TextStyle(
                         fontSize: 15,
                         color: Color(hexColor(c8F959E))),
@@ -76,7 +76,7 @@ class _SignInPageState extends State<SignInPage> {
                 const SizedBox(height: 10),
                 TextFormField(
                   decoration: InputDecoration(
-                      labelText: AppLocalizations.of(context)!.sign_up_password,
+                      labelText: translation(context).sign_up_password,
                       labelStyle: TextStyle(
                           fontSize: 15,
                           color: Color(hexColor(c8F959E))),
@@ -96,7 +96,7 @@ class _SignInPageState extends State<SignInPage> {
                         Navigator.pushNamed(context, '/forgot_password');
                       },
                       child: Text(
-                        AppLocalizations.of(context)!.forgot_password,
+                        translation(context).forgot_password,
                         style: TextStyle(
                             fontSize: 15,
                             color: Color(hexColor(cEA4335))),
@@ -109,7 +109,7 @@ class _SignInPageState extends State<SignInPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      AppLocalizations.of(context)!.sign_up_remeber_me,
+                      translation(context).sign_up_remeber_me,
                       style: TextStyle(
                           fontSize: 15,
                           color: Color(hexColor(c1D1E20))),
@@ -127,11 +127,11 @@ class _SignInPageState extends State<SignInPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                AppLocalizations.of(context)!.signin_term1,
+                translation(context).signin_term1,
                 style: TextStyle(
                     fontSize: 15, color: Color(hexColor(c8F959E))),
               ),
-              Text(AppLocalizations.of(context)!.signin_term2,
+              Text(translation(context).signin_term2,
                   style: TextStyle(
                       fontSize: 15,
                       color: Color(hexColor(c8F959E)))),
@@ -144,7 +144,7 @@ class _SignInPageState extends State<SignInPage> {
                       textColor: cFEFEFE,
                       backgroupColor: c9775FA,
                       borderColor: c9775FA,
-                      text: AppLocalizations.of(context)!.login,
+                      text: translation(context).login,
                       wSize: double.infinity,
                       htsize: 72)),
             ],
