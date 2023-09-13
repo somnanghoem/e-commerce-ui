@@ -1,6 +1,6 @@
 import 'package:e_shoes_app/constant/color_const.dart';
 import 'package:e_shoes_app/constant/language_constants.dart';
-import 'package:e_shoes_app/screen/sidebar/sidebar_menu.dart';
+import 'package:e_shoes_app/screen/sidebar/sidebar_menu_screen.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +14,6 @@ class SideBar extends StatefulWidget {
 class _MyWidgetState extends State<SideBar> {
   @override
   Widget build(BuildContext context) {
-    Locale myLocale = Localizations.localeOf(context);
     return Drawer(
       backgroundColor: Color(hexColor(cFFFFFF)),
       // Add a ListView to the drawer. This ensures the user can scroll

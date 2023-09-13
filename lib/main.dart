@@ -5,7 +5,7 @@ import 'package:e_shoes_app/screen/forgotpassword/verify_code.dart';
 import 'package:e_shoes_app/screen/init/init_sceen01.dart';
 import 'package:e_shoes_app/screen/init/init_screen02.dart';
 import 'package:e_shoes_app/screen/main/main_screen.dart';
-import 'package:e_shoes_app/screen/sidebar/change_language.dart';
+import 'package:e_shoes_app/screen/sidebar/change_language_screen.dart';
 import 'package:e_shoes_app/screen/sign/create_account.dart';
 import 'package:e_shoes_app/screen/sign/sign_up.dart';
 import 'package:e_shoes_app/screen/sign/signin.dart';

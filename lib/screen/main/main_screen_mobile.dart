@@ -1,12 +1,12 @@
 import 'package:e_shoes_app/constant/color_const.dart';
 import 'package:e_shoes_app/screen/bag/bag_screen.dart';
-import 'package:e_shoes_app/screen/main/component/search_area.dart';
 import 'package:e_shoes_app/screen/home/home_screen.dart';
-import 'package:e_shoes_app/screen/menu/menu_image_bar.dart';
+import 'package:e_shoes_app/screen/main/component/menu_image_bar.dart';
 import 'package:e_shoes_app/screen/sidebar/sidbar.dart';
 import 'package:e_shoes_app/screen/wallet/wallet_screen.dart';
 import 'package:e_shoes_app/screen/wishlist/wishlist_screen.dart';
 import 'package:e_shoes_app/utils/hexcolor.dart';
+import 'package:e_shoes_app/utils/mobile_screen_size.dart';
 import 'package:flutter/material.dart';
 
 class MainScreenMobile extends StatefulWidget {
@@ -24,7 +24,7 @@ class _MainScreenMobileState extends State<MainScreenMobile> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    final double width = MediaQuery.of(context).size.width;
+    final double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Color(hexColor(cFFFFFF)),
       /*=====================*
@@ -77,27 +77,26 @@ class _MainScreenMobileState extends State<MainScreenMobile> {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          // Header and Serchar Bar
-          const SearchArea(),
           PageStorage(bucket: bucket, child: currentScreen)
         ],
       )),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(),
-        notchMargin: 10,
+        notchMargin: screenWidth <= mobileScreenSize.IPHONE_X.width ? 5 : 10,
         /*================
          *    Menu Bar
          *================*/
         child: Container(
-          height: 79,
+          height: screenWidth <= mobileScreenSize.IPHONE_X.width ? 59 : 79,
           width: size.width,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               // Home
               MaterialButton(
-                  minWidth: width <= 375 ? 40 : 25,
+                  minWidth:
+                      screenWidth <= mobileScreenSize.IPHONE_X.width ? 40 : 25,
                   onPressed: () {
                     setState(() {
                       _currentTab = 0;
@@ -111,7 +110,8 @@ class _MainScreenMobileState extends State<MainScreenMobile> {
                       image: 'assets/images/Home.png')),
               // WishList
               MaterialButton(
-                minWidth: width <= 375 ? 40 : 25,
+                minWidth:
+                    screenWidth <= mobileScreenSize.IPHONE_X.width ? 40 : 25,
                 onPressed: () {
                   setState(() {
                     _currentTab = 1;
@@ -126,7 +126,8 @@ class _MainScreenMobileState extends State<MainScreenMobile> {
                 // Bag
               ),
               MaterialButton(
-                  minWidth: width <= 375 ? 40 : 25,
+                  minWidth:
+                      screenWidth <= mobileScreenSize.IPHONE_X.width ? 40 : 25,
                   onPressed: () {
                     setState(() {
                       _currentTab = 2;
@@ -140,7 +141,8 @@ class _MainScreenMobileState extends State<MainScreenMobile> {
                       image: 'assets/images/Bag.png')),
               // Wallet
               MaterialButton(
-                  minWidth: width <= 375 ? 40 : 25,
+                  minWidth:
+                      screenWidth <= mobileScreenSize.IPHONE_X.width ? 40 : 25,
                   onPressed: () {
                     setState(() {
                       _currentTab = 3;

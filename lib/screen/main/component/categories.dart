@@ -46,11 +46,11 @@ class CategoriesCard extends StatelessWidget {
     final double screenWidth = MediaQuery.of(context).size.width;
     return Container(
       margin: screenWidth <= mobileScreenSize.IPHONE_X.width
-          ? const EdgeInsets.fromLTRB(0, 0, 15, 0)
+          ? const EdgeInsets.fromLTRB(0, 0, 10, 0)
           : const EdgeInsets.fromLTRB(0, 0, 10, 0),
       padding: screenWidth <= mobileScreenSize.IPHONE_X.width
           ? const EdgeInsets.all(10)
-          : const EdgeInsets.all(5),
+          : const EdgeInsets.all(10),
       height: screenWidth <= mobileScreenSize.IPHONE_X.width ? 40 : 60,
       decoration: BoxDecoration(
           color: Color(hexColor(cF5F6FA)),
