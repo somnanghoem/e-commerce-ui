@@ -56,7 +56,7 @@ class _ChangeLanguageScreenState extends State<ChangeLanguageScreen> {
                  *    Back Button
                  *===================*/
                 Padding(
-                    padding: screenWidth <= mobileScreenSize.IPHONE_X.width
+                    padding: screenWidth <= MobileScreenSize.IPHONE_X.width
                         ? const EdgeInsets.fromLTRB(10, 15, 0, 0)
                         : const EdgeInsets.fromLTRB(20, 30, 0, 0),
                     child: GestureDetector(
@@ -98,7 +98,7 @@ class _ChangeLanguageScreenState extends State<ChangeLanguageScreen> {
                       children: [
                         Image.asset("assets/icons/cambodia_flag.png"),
                        SizedBox(
-                          width: screenWidth<= mobileScreenSize.IPHONE_X.width ? 10 :20,
+                          width: screenWidth<= MobileScreenSize.IPHONE_X.width ? 10 :20,
                         ),
                         Text(
                           translation(context).khmer,

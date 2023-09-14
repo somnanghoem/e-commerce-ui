@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class BagScreen extends StatefulWidget {
   const BagScreen({super.key});
@@ -15,7 +12,7 @@ class _BagScreenState extends State<BagScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      child: Text('Bag Screen'),
+      child: const Text('Bag Screen'),
     ));
   }
 }

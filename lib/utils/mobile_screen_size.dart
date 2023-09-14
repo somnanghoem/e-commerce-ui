@@ -1,8 +1,10 @@
 
+// ignore_for_file: constant_identifier_names
+
 import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:flutter/widgets.dart';
 
-enum mobileScreenSize  {
+enum MobileScreenSize  {
 
   // IPHONE
   IPHONE_13_PRO   ( pixelWidth: 1170 , pixelHeight: 2532, width: 390, height: 844),
@@ -51,7 +53,7 @@ enum mobileScreenSize  {
   TABLET_PIXEL_C                ( pixelWidth: 1800  , pixelHeight: 2560, width: 900, height: 1280),
   TABLET_SAMSUNG_GALAXY_TAB_10  ( pixelWidth: 800   , pixelHeight: 1280, width: 900, height: 1280),
   TABLET_CHROMEBOOK_PIXEL       ( pixelWidth: 2560  , pixelHeight: 1700, width: 1280, height: 850);
-  const mobileScreenSize({
+  const MobileScreenSize({
     required this.pixelWidth,
     required this.pixelHeight,
     required this.width,
@@ -70,14 +72,14 @@ enum mobileScreenSize  {
 TextStyle customTextStyle15( double screenWidth, String textColor) {
   return TextStyle(
     color: Color(hexColor(textColor)),
-    fontSize: screenWidth <= mobileScreenSize.IPHONE_XS.width ? 11 : 15, 
+    fontSize: screenWidth <= MobileScreenSize.IPHONE_XS.width ? 11 : 15, 
   );
 }
 
 TextStyle customTextStyle15Bold( double screenWidth, String textColor, FontWeight fontWeight) {
   return TextStyle(
     color: Color(hexColor(textColor)),
-    fontSize: screenWidth <= mobileScreenSize.IPHONE_XS.width ? 11 : 15, 
+    fontSize: screenWidth <= MobileScreenSize.IPHONE_XS.width ? 11 : 15, 
     fontWeight: FontWeight.w700,
   );
 }
@@ -85,7 +87,7 @@ TextStyle customTextStyle15Bold( double screenWidth, String textColor, FontWeigh
 TextStyle customTextStyle17( double screenWidth, String textColor, FontWeight fontWeight ) {
   return TextStyle(
     color: Color(hexColor(textColor)),
-    fontSize: screenWidth <= mobileScreenSize.IPHONE_XS.width ? 13 : 17, 
+    fontSize: screenWidth <= MobileScreenSize.IPHONE_XS.width ? 13 : 17, 
     fontWeight: FontWeight.w700,
   );
 }
@@ -93,7 +95,7 @@ TextStyle customTextStyle17( double screenWidth, String textColor, FontWeight fo
 TextStyle customTextStyle28( double screenWidth, String textColor, FontWeight fontWeight ) {
   return TextStyle(
     color: Color(hexColor(textColor)),
-    fontSize: screenWidth <= mobileScreenSize.IPHONE_XS.width ? 24 : 28, 
+    fontSize: screenWidth <= MobileScreenSize.IPHONE_XS.width ? 24 : 28, 
     fontWeight: FontWeight.w700,
   );
 }
@@ -101,7 +103,7 @@ TextStyle customTextStyle28( double screenWidth, String textColor, FontWeight fo
 TextStyle customTextStyle25( double screenWidth, String textColor, FontWeight fontWeight ) {
   return TextStyle(
     color: Color(hexColor(textColor)),
-    fontSize: screenWidth <= mobileScreenSize.IPHONE_XS.width ? 21 : 25, 
+    fontSize: screenWidth <= MobileScreenSize.IPHONE_XS.width ? 21 : 25, 
     fontWeight: FontWeight.w700,
   );
 }

@@ -1,7 +1,5 @@
 import 'package:e_shoes_app/constant/color_const.dart';
 import 'package:e_shoes_app/screen/main/component/search_area.dart';
-import 'package:e_shoes_app/screen/product/product_box.dart';
-import 'package:e_shoes_app/utils/hexcolor.dart';
 import 'package:e_shoes_app/utils/mobile_screen_size.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -89,7 +87,7 @@ class _HomePageState extends State<HomePage> {
           child: GridView.builder(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                childAspectRatio: screenWidth <= mobileScreenSize.IPHONE_X.width
+                childAspectRatio: screenWidth <= MobileScreenSize.IPHONE_X.width
                     ? mobileSmallDevice
                     : mobileMeduimDevice,
               ),
@@ -107,11 +105,11 @@ class _HomePageState extends State<HomePage> {
                             products[index]["image"],
                             fit: BoxFit.cover,
                             width:
-                                screenWidth <= mobileScreenSize.IPHONE_X.width
+                                screenWidth <= MobileScreenSize.IPHONE_X.width
                                     ? 140
                                     : 160,
                             height:
-                                screenWidth <= mobileScreenSize.IPHONE_X.width
+                                screenWidth <= MobileScreenSize.IPHONE_X.width
                                     ? 183
                                     : 203,
                           ),

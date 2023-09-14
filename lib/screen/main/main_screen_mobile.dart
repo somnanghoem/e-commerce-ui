@@ -83,12 +83,12 @@ class _MainScreenMobileState extends State<MainScreenMobile> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(),
-        notchMargin: screenWidth <= mobileScreenSize.IPHONE_X.width ? 5 : 10,
+        notchMargin: screenWidth <= MobileScreenSize.IPHONE_X.width ? 5 : 10,
         /*================
          *    Menu Bar
          *================*/
         child: Container(
-          height: screenWidth <= mobileScreenSize.IPHONE_X.width ? 59 : 79,
+          height: screenWidth <= MobileScreenSize.IPHONE_X.width ? 59 : 79,
           width: size.width,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -96,7 +96,7 @@ class _MainScreenMobileState extends State<MainScreenMobile> {
               // Home
               MaterialButton(
                   minWidth:
-                      screenWidth <= mobileScreenSize.IPHONE_X.width ? 40 : 25,
+                      screenWidth <= MobileScreenSize.IPHONE_X.width ? 40 : 25,
                   onPressed: () {
                     setState(() {
                       _currentTab = 0;
@@ -111,7 +111,7 @@ class _MainScreenMobileState extends State<MainScreenMobile> {
               // WishList
               MaterialButton(
                 minWidth:
-                    screenWidth <= mobileScreenSize.IPHONE_X.width ? 40 : 25,
+                    screenWidth <= MobileScreenSize.IPHONE_X.width ? 40 : 25,
                 onPressed: () {
                   setState(() {
                     _currentTab = 1;
@@ -127,7 +127,7 @@ class _MainScreenMobileState extends State<MainScreenMobile> {
               ),
               MaterialButton(
                   minWidth:
-                      screenWidth <= mobileScreenSize.IPHONE_X.width ? 40 : 25,
+                      screenWidth <= MobileScreenSize.IPHONE_X.width ? 40 : 25,
                   onPressed: () {
                     setState(() {
                       _currentTab = 2;
@@ -142,7 +142,7 @@ class _MainScreenMobileState extends State<MainScreenMobile> {
               // Wallet
               MaterialButton(
                   minWidth:
-                      screenWidth <= mobileScreenSize.IPHONE_X.width ? 40 : 25,
+                      screenWidth <= MobileScreenSize.IPHONE_X.width ? 40 : 25,
                   onPressed: () {
                     setState(() {
                       _currentTab = 3;

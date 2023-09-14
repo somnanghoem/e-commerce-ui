@@ -71,10 +71,10 @@ class _InitScreen02MobileState extends State<InitScreen02Mobile> {
                           backgroupColor: cF5F6FA,
                           borderColor: cF5F6FA,
                           text: translation(context).men,
-                          wSize: screenWidth <= mobileScreenSize.IPHONE_X.width
+                          wSize: screenWidth <= MobileScreenSize.IPHONE_X.width
                               ? 130
                               : 150,
-                          htsize: screenWidth <= mobileScreenSize.IPHONE_X.width
+                          htsize: screenWidth <= MobileScreenSize.IPHONE_X.width
                               ? 40
                               : 60),
                       AppButtons(
@@ -82,10 +82,10 @@ class _InitScreen02MobileState extends State<InitScreen02Mobile> {
                           backgroupColor: c9775FA,
                           borderColor: c9775FA,
                           text: translation(context).woman,
-                          wSize: screenWidth <= mobileScreenSize.IPHONE_X.width
+                          wSize: screenWidth <= MobileScreenSize.IPHONE_X.width
                               ? 130
                               : 150,
-                          htsize: screenWidth <= mobileScreenSize.IPHONE_X.width
+                          htsize: screenWidth <= MobileScreenSize.IPHONE_X.width
                               ? 40
                               : 60)
                     ],

@@ -18,12 +18,12 @@ class SideBarMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
     return Padding(
-      padding: screenWidth <= mobileScreenSize.IPHONE_X.width
+      padding: screenWidth <= MobileScreenSize.IPHONE_X.width
           ? const EdgeInsets.symmetric(horizontal: 15, vertical: 10)
           : const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: TextButton(
         style: TextButton.styleFrom(
-          padding: screenWidth <= mobileScreenSize.IPHONE_X.width
+          padding: screenWidth <= MobileScreenSize.IPHONE_X.width
               ? const EdgeInsets.all(15)
               : const EdgeInsets.all(20),
           shape:
@@ -36,11 +36,11 @@ class SideBarMenu extends StatelessWidget {
             SvgPicture.asset(
               icon,
               color: Color(hexColor(c9775FA)),
-              width: screenWidth <= mobileScreenSize.IPHONE_X.width ? 18 : 22,
+              width: screenWidth <= MobileScreenSize.IPHONE_X.width ? 18 : 22,
             ),
             SizedBox(
                 width:
-                    screenWidth <= mobileScreenSize.IPHONE_X.width ? 15 : 20),
+                    screenWidth <= MobileScreenSize.IPHONE_X.width ? 15 : 20),
             Expanded(
                 child:
                     Text(text, style: customTextStyle15(screenWidth, c8F959E))),

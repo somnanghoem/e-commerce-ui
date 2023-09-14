@@ -1,5 +1,3 @@
-import 'package:e_shoes_app/constant/color_const.dart';
-import 'package:e_shoes_app/constant/language_constants.dart';
 import 'package:e_shoes_app/responsesive/responsive.dart';
 import 'package:e_shoes_app/screen/sign/createacount/mobile_create_account.dart';
 import 'package:flutter/material.dart';

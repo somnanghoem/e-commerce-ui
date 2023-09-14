@@ -7,14 +7,14 @@ const String _languagecode = 'languageCode';
 //languages code
 
 Future<Locale> setLocale(String languageCode) async {
-  SharedPreferences _prefs = await SharedPreferences.getInstance();
-  await _prefs.setString(_languagecode, languageCode);
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  await prefs.setString(_languagecode, languageCode);
   return _locale(languageCode);
 }
 
 Future<Locale> getLocale() async {
-  SharedPreferences _prefs = await SharedPreferences.getInstance();
-  String languageCode = _prefs.getString(_languagecode) ?? "English";
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  String languageCode = prefs.getString(_languagecode) ?? "English";
   return _locale(languageCode);
 }
 

@@ -20,7 +20,7 @@ class MenuBarImage extends StatelessWidget {
   Widget build(BuildContext context) {
     final double screenWidth = MediaQuery.of(context).size.width;
     return Container(
-        padding: screenWidth <= mobileScreenSize.IPHONE_XS.width
+        padding: screenWidth <= MobileScreenSize.IPHONE_XS.width
             ? const EdgeInsets.fromLTRB(0, 0, 0, 0)
             : const EdgeInsets.fromLTRB(10, 0, 10, 0),
         child: currentTab == index

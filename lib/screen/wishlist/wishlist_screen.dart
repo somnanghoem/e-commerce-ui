@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class WishListScreen extends StatefulWidget {
@@ -11,6 +10,9 @@ class WishListScreen extends StatefulWidget {
 class _WishListScreenState extends State<WishListScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Container( child: Text("Wish List"),));
+    return Scaffold(
+        body: Container(
+      child: const Text("Wish List"),
+    ));
   }
 }

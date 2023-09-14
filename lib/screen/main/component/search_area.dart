@@ -20,7 +20,7 @@ class SearchArea extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            height: screenWidth <= mobileScreenSize.IPHONE_X.width ? 5 : 10,
+            height: screenWidth <= MobileScreenSize.IPHONE_X.width ? 5 : 10,
           ),
           // Welcome Text
           Text(translation(context).hello,
@@ -28,14 +28,14 @@ class SearchArea extends StatelessWidget {
           Text(translation(context).hello_to_user('Laza'),
               style: customTextStyle15(screenWidth, c8F959E)),
           SizedBox(
-            height: screenWidth <= mobileScreenSize.IPHONE_X.width ? 5 : 10,
+            height: screenWidth <= MobileScreenSize.IPHONE_X.width ? 5 : 10,
           ),
           // Search button
           Container(
-            padding: screenWidth <= mobileScreenSize.IPHONE_X.width
+            padding: screenWidth <= MobileScreenSize.IPHONE_X.width
                 ? const EdgeInsets.symmetric(horizontal: 15)
                 : const EdgeInsets.symmetric(horizontal: 10),
-            height: screenWidth <= mobileScreenSize.IPHONE_X.width ?40:50,
+            height: screenWidth <= MobileScreenSize.IPHONE_X.width ?40:50,
             decoration: BoxDecoration(
                 color: Color(hexColor(cF5F6FA)),
                 borderRadius: BorderRadius.circular(15)),
@@ -48,7 +48,7 @@ class SearchArea extends StatelessWidget {
                     size: 20,
                   ),
                   prefixIconConstraints:
-                      screenWidth <= mobileScreenSize.IPHONE_X.width
+                      screenWidth <= MobileScreenSize.IPHONE_X.width
                           ? const BoxConstraints(maxHeight: 20, minWidth: 25)
                           : const BoxConstraints(maxHeight: 15, minWidth: 20),
                   border: InputBorder.none,
@@ -56,7 +56,7 @@ class SearchArea extends StatelessWidget {
             ),
           ),
           SizedBox(
-             height: screenWidth <= mobileScreenSize.IPHONE_X.width ? 5 : 10,
+             height: screenWidth <= MobileScreenSize.IPHONE_X.width ? 5 : 10,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -69,7 +69,7 @@ class SearchArea extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: screenWidth <= mobileScreenSize.IPHONE_X.width ? 5 : 10,
+            height: screenWidth <= MobileScreenSize.IPHONE_X.width ? 5 : 10,
           ),
           /*=======================*
            *    Choose Category 
@@ -79,7 +79,7 @@ class SearchArea extends StatelessWidget {
            *   End Choose Category 
            *=======================*/
           SizedBox(
-             height: screenWidth <= mobileScreenSize.IPHONE_X.width ? 5 : 10,
+             height: screenWidth <= MobileScreenSize.IPHONE_X.width ? 5 : 10,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
